@@ -1,9 +1,13 @@
 const express = require('express');
 const mongoose = require("mongoose");
 
+const path = require('path');
+require('dotenv').config({ path: path.resolve(__dirname, '../.env') });
+
 const routes = require("./routes");
 const app = express();
 const port = process.env.PORT || 3001;
+
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
