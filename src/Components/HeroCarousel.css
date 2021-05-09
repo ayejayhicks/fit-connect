@@ -1,0 +1,26 @@
+#heroText {
+    padding-top: 20vh;
+    font-size: 5vw;
+    color: white;
+    font-family: ubuntu;
+    margin-right: 100px;
+}
+
+
+.Jumbotron {
+    background-image: url('../Assets/img0.jpg');
+    background-size: cover;
+    height: 70vh;
+    background-position: center center;
+    
+}
+
+.background-tint {
+  background-color: rgba(0, 0, 0, 0.5); /* Tint color */
+  background-blend-mode: multiply;
+}
+
+/* #carouselId {
+    
+
+} */

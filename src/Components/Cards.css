@@ -1,0 +1,9 @@
+h5, .text {
+    font-family: roboto
+}
+
+#sizeCardImg {
+    height: 120px;
+    width: 120px;
+    justify-content: center;
+}
