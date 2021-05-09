@@ -4,7 +4,7 @@ import navBarImage from '../Assets/fitness-navbar.svg'
 
 export const NavigationBar = () => (
     <React.Fragment>
-        <Navbar bg="light" variant="light">
+        <Navbar bg="light" variant="liggitht">
         <Container fluid>
             <Navbar.Brand href="/">
                 <img
@@ -24,4 +24,4 @@ export const NavigationBar = () => (
         </Container>
         </Navbar>
         </React.Fragment>
-)
+);
