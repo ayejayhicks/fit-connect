@@ -5,14 +5,14 @@ import "./SecondSection.css"
 
 export const SecondSection = () => (
 
-    <Container>
+    <Container className="Container">
         <Row id="marginRow">
-            <Col xl="6">
+            <Col xl="6" className="left_bottom">
                 <div className="img2Div">
                     <div className="img2" alt="people-training"></div>
                 </div>
             </Col>
-            <Col xl="6">
+            <Col xl="6" className="right_top">
                 <CardDeck className="text-center cardAlign2">
                     <Card className="border-0 align-items-center">
                         <Card.Body>

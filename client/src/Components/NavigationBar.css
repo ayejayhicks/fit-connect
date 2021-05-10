@@ -1,3 +1,20 @@
 #navBackground {
     background-color: white;
+    background-image: url('../Assets/fitness-navbar.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
+
+
+   @media only screen and (max-device-width: 720px) {
+  
+    #navBackground {
+        background-image: url('../Assets/fitness-navbar.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+  }

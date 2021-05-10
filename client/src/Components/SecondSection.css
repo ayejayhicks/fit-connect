@@ -1,6 +1,4 @@
 #marginRow {
-    margin-top: 5vh;
-    margin-bottom: 5vh;
     font-family: roboto;
 }
 
@@ -27,4 +25,22 @@
 position: relative;
   top: 30%;
 
+}
+
+.container {
+    display: flex;
+}
+
+@media (max-width: 1080px){
+    .container{
+        flex-direction: column; /*display as column*/
+    } 
+    .left_bottom{
+        order: 2; /*reorder to bottom*/
+        width: 100%; /*make full width*/
+    }
+    .right_top{
+        order: 1; /*reorder to top*/
+        width: 100%; /*make full width*/
+    }
 }
