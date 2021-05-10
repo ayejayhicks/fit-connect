@@ -1,9 +1,10 @@
 #heroText {
-    padding-top: 20vh;
-    font-size: 5vw;
+    padding-top: 25vh;
+    font-size: 3.5vw;
     color: white;
     font-family: ubuntu;
     margin-right: 100px;
+    margin-left: 100px
 }
 
 
@@ -20,7 +21,51 @@
   background-blend-mode: multiply;
 }
 
-/* #carouselId {
-    
 
-} */
+@media only screen and (max-device-width: 1280px) {
+  .Jumbotron {
+    height: 60vh;
+  }
+
+  #heroText {
+    padding-top: 20vh;
+    font-size: 6vw;
+    color: white;
+    font-family: ubuntu;
+    margin-right: 100px;
+    margin-left: 100px
+}
+
+    }
+
+    @media only screen and (max-device-width: 800px) {
+  .Jumbotron {
+    height: 50vh;
+  }
+
+  #heroText {
+    padding-top: 11vh;
+    font-size: 7vw;
+    color: white;
+    font-family: ubuntu;
+    margin-right: 100px;
+    margin-left: 100px
+}
+
+    }
+
+@media only screen and (max-device-width: 567px) {
+  .Jumbotron {
+    height: 30vh;
+  }
+
+  #heroText {
+    padding-top: 7vh;
+    font-size: 8vw;
+    color: white;
+    font-family: ubuntu;
+    margin-right: 25px;
+    margin-left: 25px;
+}
+
+    }

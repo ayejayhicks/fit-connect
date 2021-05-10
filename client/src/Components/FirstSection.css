@@ -1,0 +1,30 @@
+#marginRow {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    font-family: roboto;
+}
+
+.img0Div{
+    height: 500px;
+    width: auto;
+    aspect-ratio: 1;
+    margin: 0 auto;
+    background-position: center center;
+}
+.img0 {
+    border-radius: 50%;
+    background-image: url('../Assets/img1.jpg');
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    background-position: center center;
+   
+    
+}
+
+
+.cardAlign {
+position: relative;
+  top: 30%;
+
+}
