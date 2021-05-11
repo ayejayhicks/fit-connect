@@ -1,0 +1,9 @@
+.footerMargin {
+    font-family: roboto;
+    position: absolute;
+    bottom:auto;
+    padding: 4vh;
+    background-color: #F3F3F3;
+    width: 105% !important;
+}
+

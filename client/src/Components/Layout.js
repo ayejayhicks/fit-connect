@@ -1,10 +1,9 @@
-import React from 'react'
-import { Container } from 'react-bootstrap'
-import styled from 'styled-components'
-const Button = styled.button``
+import React from 'react';
+import { Container } from 'react-bootstrap';
 
 export const Layout = (props) => (
     <Container>
         {props.children}
     </Container>
-)
+);
+
