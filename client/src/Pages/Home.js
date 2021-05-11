@@ -1,12 +1,12 @@
 import React from 'react';
-import { HeroCarousel } from '../Components/HeroCarousel'
-import { Layout } from '../Components/Layout';
-import { NavigationBar } from '../Components/NavigationBar';
-import { Cards } from '../Components/Cards';
-import { FirstSection } from '../Components/FirstSection';
-import { SecondSection } from '../Components/SecondSection';
-import { FooterSection } from '../Components/Footer';
-import { FooterContent } from '../Components/FooterContent';
+import { HeroCarousel } from '../Components/Home_Components/HeroCarousel'
+import { Layout } from '../Components/Home_Components/Layout';
+import { NavigationBar } from '../Components/Home_Components/NavigationBar';
+import { Cards } from '../Components/Home_Components/Cards';
+import { FirstSection } from '../Components/Home_Components/FirstSection';
+import { SecondSection } from '../Components/Home_Components/SecondSection';
+import { FooterSection } from '../Components/Home_Components/Footer';
+import { FooterContent } from '../Components/Home_Components/FooterContent';
 
 export const Home = () => {
     return (
