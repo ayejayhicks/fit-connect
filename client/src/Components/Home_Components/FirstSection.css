@@ -1,5 +1,4 @@
 #marginRow {
-
     font-family: roboto;
 }
 
@@ -10,20 +9,17 @@
     margin: 0 auto;
     background-position: center center;
 }
+
 .img0 {
     border-radius: 50%;
-    background-image: url('../Assets/img1.jpg');
+    background-image: url('../../Assets/img1.jpg');
     background-size: cover;
     height: 100%;
     width: 100%;
     background-position: center center;
-   
-    
 }
-
 
 .cardAlign {
     position: relative;
     top: 30%;
-
 }

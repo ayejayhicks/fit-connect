@@ -1,9 +1,9 @@
 import React from 'react'
 import { CardDeck, Card } from 'react-bootstrap';
 import "bootstrap/dist/css/bootstrap.min.css";
-import cardImage from '../Assets/roundedimg01.svg'
-import cardImage2 from '../Assets/roundedimg02.svg'
-import cardImage3 from '../Assets/roundedimg03.svg'
+import cardImage from '../../Assets/roundedimg01.svg'
+import cardImage2 from '../../Assets/roundedimg02.svg'
+import cardImage3 from '../../Assets/roundedimg03.svg'
 import "./Cards.css"
 
 
@@ -34,7 +34,7 @@ export const Cards = () => (
                 <Card.Body>
                     <Card.Title><h5>HOW WE WORK</h5></Card.Title>
                     <Card.Text className="text">
-                        Our mission is to connect people that are trying to achieve the same goalzx!
+                        Our mission is to connect people that are trying to achieve the same goal!
       </Card.Text>
                 </Card.Body>
             </Card>
