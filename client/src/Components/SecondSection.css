@@ -1,7 +1,6 @@
 #marginRow {
     font-family: roboto;
 }
-
 .img2Div{
     height: auto;
     width: auto;
@@ -10,7 +9,7 @@
     background-position: center center;
 }
 .img2 {
-    /* border-radius: 50%; */
+    
     background-image: url('../Assets/img5.png');
     background-size: contain;
     background-repeat: no-repeat;
@@ -20,27 +19,24 @@
    
     
 }
-
 .cardAlign2 {
 position: relative;
   top: 30%;
-
 }
-
-.container {
+/* .container {
     display: flex;
-}
+} */
 
 @media (max-width: 1080px){
     .container{
-        flex-direction: column; /*display as column*/
+        flex-direction: column; 
     } 
     .left_bottom{
-        order: 2; /*reorder to bottom*/
-        width: 100%; /*make full width*/
+        order: 2; 
+        width: 100%; 
     }
     .right_top{
-        order: 1; /*reorder to top*/
-        width: 100%; /*make full width*/
+        order: 1; 
+        width: 100%; 
     }
 }
