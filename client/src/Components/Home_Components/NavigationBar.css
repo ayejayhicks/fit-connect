@@ -20,3 +20,13 @@
     color: white!important;
  }
 
+
+.signUpButton {
+      background-color: black;
+      color: white;
+      padding: 0px 10px 0px 10px;
+      margin-left: 10px;
+      font-weight: bold;
+      font-family: roboto;
+    }
+

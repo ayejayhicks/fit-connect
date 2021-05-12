@@ -5,26 +5,7 @@ import "./SecondSection.css"
 
 export const SecondSection = () => (
     <>
-        <style type="text/css">
-            {`
-    .btn-flat {
-      background-color: #F46D10;
-      color: white;
-      padding-right: 40px;
-      padding-left: 40px;
-      margin-left: 10px;
-      font-weight: bold;
-      font-family: roboto;
-    }
-
-    @media (max-width: 573px){
-    margin-left:0px;
-    margin-right: 0px;
-    }
-    `}
-        </style>
-
-        <Container className="Container">
+         <Container className="Container">
             <Row id="marginRow">
                 <Col xl="6" className="left_bottom">
                     <div className="img2Div">

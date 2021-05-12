@@ -1,8 +1,27 @@
 import React from 'react';
-import { Form, Button, Col } from 'react-bootstrap';
+import { Form, Button, Col, Row } from 'react-bootstrap';
 
 export const Forms = () => (
+
+    <Row>
+        <Col>
+        
+        </Col>
+
+        <Col>
     <Form>
+        <Form.Row>
+            <Form.Group as={Col} controlId="formName">
+                <Form.Label>Name</Form.Label>
+                <Form.Control type="string" placeholder="First Name" />
+            </Form.Group>
+
+            <Form.Group as={Col} controlId="formGridPassword">
+                <Form.Label>Password</Form.Label>
+                <Form.Control type="password" placeholder="Password" />
+            </Form.Group>
+        </Form.Row>
+
         <Form.Row>
             <Form.Group as={Col} controlId="formGridEmail">
                 <Form.Label>Email</Form.Label>
@@ -15,9 +34,9 @@ export const Forms = () => (
             </Form.Group>
         </Form.Row>
 
-        <Form.Group controlId="formGridAddress1">
-            <Form.Label>Address</Form.Label>
-            <Form.Control placeholder="1234 Main St" />
+        <Form.Group controlId="formGridNumber1">
+            <Form.Label>Phone Number</Form.Label>
+            <Form.Control placeholder="111 222 3333" />
         </Form.Group>
 
         <Form.Group controlId="formGridAddress2">
@@ -53,4 +72,6 @@ export const Forms = () => (
             Submit
   </Button>
     </Form>
+        </Col>
+    </Row>
 );
