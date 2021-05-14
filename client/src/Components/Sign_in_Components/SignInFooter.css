@@ -1,6 +1,6 @@
-.footerMargin {
+.SignInFooterMargin {
     font-family: roboto;
-    position: absolute!important;
+    position: absolute;
     bottom: auto;
     padding: 4vh;
     background-color: #F3F3F3;

@@ -23,3 +23,18 @@
     position: relative;
     top: 30%;
 }
+
+
+@media only screen and (max-device-width: 500px) {
+
+
+
+.img0Div{
+    height: 350px;
+    width: auto;
+    aspect-ratio: 1;
+    margin: 0 auto;
+    background-position: center center;
+}
+
+}
