@@ -1,5 +1,4 @@
 import React from 'react';
-import { Col } from 'react-bootstrap';
 import { NavigationBar } from '../Components/Home_Components/NavigationBar';
 import { SignUpLayout } from '../Components/Sign_up_Components/SignUpLayout';
 import { SignUpContainer } from '../Components/Sign_up_Components/SignUpContainer';
@@ -21,10 +20,8 @@ const SignUp = () => {
             <SignUpLayout>
                     <SignUpImg>
                     </SignUpImg>
-             
                 <SignUpForms>
                 </SignUpForms>
-         
             </SignUpLayout>
 
             {/* Footer */}
