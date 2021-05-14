@@ -9,16 +9,14 @@ const port = process.env.PORT || 3001;
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/public"));
-}
+app.use(express.static("client/public"));
+
+// app.get("*", function(req, res) {
+//   res.sendFile(path.join(__dirname, "./client/public/index.html"));
+// });
 
 // Add routes, both API and view
-app.use("/api",routes);
-
-app.get("*", function(req, res) {
-  res.sendFile(path.join(__dirname, "./client/public/index.html"));
-});
+app.use(routes);
 
 mongoose.connect(
   process.env.MONGODB_URI || 'mongodb://localhost/fitconnect',
