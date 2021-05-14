@@ -5,7 +5,7 @@ import Home from './Pages/Home';
 import Login from './Pages/Login';
 import Main from './Pages/Main';
 import SignIn from './Pages/SignIn'
-import SignUp from './Pages/SignUp'
+import SignUp from './Pages/Signup'
 
 import './App.css'
 import './index.css'

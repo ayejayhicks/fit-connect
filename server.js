@@ -1,8 +1,12 @@
 const express = require('express');
 const mongoose = require("mongoose");
+const session = require('express-session');
 const path = require("path");
 
 const routes = require("./routes");
+const { Console } = require('console');
+var MongoDBStore = require('connect-mongodb-session')(session);
+
 const app = express();
 const port = process.env.PORT || 3001;
 
@@ -15,9 +19,6 @@ app.use(express.static("client/public"));
 //   res.sendFile(path.join(__dirname, "./client/public/index.html"));
 // });
 
-// Add routes, both API and view
-app.use(routes);
-
 mongoose.connect(
   process.env.MONGODB_URI || 'mongodb://localhost/fitconnect',
   {
@@ -27,6 +28,32 @@ mongoose.connect(
     useFindAndModify: false
   }
 );
+
+var store = new MongoDBStore(
+  {
+    uri: process.env.MONGODB_URI || 'mongodb://localhost/fitconnect',
+    collection: 'sessions'
+  });
+ 
+store.on('error', function(error) {
+  if (error){
+    console.log("Error occurred");
+    console.log(error);
+  }
+});
+
+app.use(session({
+  secret: 'This is a secret',
+  cookie: {
+    maxAge: 1000 * 60 * 60 * 24 * 7 // 1 week
+  },
+  store: store,
+  resave: true,
+  saveUninitialized: true
+}));
+
+// Add routes, both API and view
+app.use(routes);
 
 // Start the API server
 app.listen(port, () => console.log(`Listening on port ${port}`));
