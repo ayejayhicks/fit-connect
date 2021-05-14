@@ -5,26 +5,7 @@ import navBarImage from "../../Assets/fitness-navbar.svg"
 
 export const NavigationBar = () => (
     <>
-        <style type="text/css">
-            {`
-    .btn-flat {
-      background-color: #F46D10;
-      color: white;
-      padding-right: 20px;
-      padding-left: 20px;
-      margin-left: 10px;
-      font-weight: bold;
-      font-family: roboto;
-    }
-
-    @media (max-width: 573px){
-    margin-left:0px;
-    margin-right: 0px;
-    }
-    `}
-        </style>
-
-        <Navbar id="navBackground" collapseOnSelect expand="sm">
+        <Navbar id="navBackground" collapseOnSelect expand="lg">
             <Navbar.Brand href="/">
                 <img
                     alt=""
@@ -40,8 +21,8 @@ export const NavigationBar = () => (
                 <Nav className="ml-auto">
                     <Nav.Link className="textNavBar" href="/">About</Nav.Link>
                     <Nav.Link className="textNavBar" href="/">Features</Nav.Link>
-                    <Nav.Link className="textNavBar" href="/login">Login</Nav.Link>
-                    <Button variant="flat" size=""> Sign Up </Button>
+                    <Nav.Link className="textNavBar" href="/signin">Login</Nav.Link>
+                    <Button variant="flat" href="/signup"> Sign Up </Button>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>

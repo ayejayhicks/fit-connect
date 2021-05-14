@@ -1,8 +1,8 @@
 import React from 'react'
 import { Row, Col, Form, Button, Container } from 'react-bootstrap'
-import './Footer.css'
+import './SignInFooter.css'
 
-export const FooterContent = (props) => (
+export const SignInFooterContent = (props) => (
 
     <Container>
         {/* Column 1 */}
