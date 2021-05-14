@@ -6,7 +6,7 @@ import { SignUpImg } from '../Components/Sign_up_Components/SignUpImg';
 import SignUpForms from '../Components/Sign_up_Components/SignUpForms';
 import { SignInFooterSection } from '../Components/Sign_in_Components/SignInFooter';
 import { SignInFooterContent } from '../Components/Sign_in_Components/SignInFooterContent';
-
+//
 const SignUp = () => {
     return (
         <React.Fragment>
