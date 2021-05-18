@@ -32,7 +32,24 @@ age: {
 },
 gender: {
   type: String
+},
+city: {
+  type: String
+},
+zipCode: {
+  type: String
+},
+emergencyContact: {
+  type: String
+},
+phoneNumberOfEmergency:{
+type: String
+
+},
+fitnessLevel:  {
+  type: String
 }
+
 }, opts);
 
 UserSchema.pre('save', function(next) {

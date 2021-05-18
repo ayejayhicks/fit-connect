@@ -2,13 +2,24 @@ import React from 'react';
 import { Form, Button, Row, Col } from 'react-bootstrap';
 import { Styles } from './EditSignUpForms'
 // import { } from 'react-bootstrap';
-import { Formik, useField } from 'formik';
+import { Formik, useField, Form as Form1 } from 'formik';
 import * as Yup from 'yup'
 import '../../index.css'
+import API from "../../utils/API";
 
 
 // Technology Formik: 
 // Technology Yup: 
+const UserFunction = (values) => {
+    alert("here");
+    alert(JSON.stringify(values, null, 2));
+    API.saveUser(values)
+        .then(res => {
+            window.location.href = '/signin';
+        }
+        )
+        .catch(err => console.log(err));
+}
 
 
 const CustomTextInput = ({ label, ...props }) => {
@@ -74,7 +85,7 @@ function SignUpForms() {
                     gender: '',
                     city: '',
                     zipCode: '',
-                    emergencyContact: '', 
+                    emergencyContact: '',
                     phoneNumberOfEmergency: '',
                     fitnessLevel: '',
                     acceptedTerms: false,
@@ -109,6 +120,9 @@ function SignUpForms() {
                     age: Yup.number()
                         .required('Please enter your age')
                         .min(18, 'You must be at least 18 years old'),
+                    fitnessLevel: Yup.string()
+                        .oneOf(['Beginner', 'Intermediate', 'Advanced'])
+                        .required('Required'),
                     city: Yup.string()
                         .required('Required'),
                     zipCode: Yup.number()
@@ -117,9 +131,7 @@ function SignUpForms() {
                     gender: Yup.string()
                         .oneOf(['Male', 'Female', 'Prefer not to say'])
                         .required('Required'),
-                    fitnessLevel: Yup.string()
-                        .oneOf(['Beginner', 'Intermediate', 'Advanced'])
-                        .required('Required'),
+
                     emergencyContact: Yup.string()
                         .min(3, 'Must be at least 3 characters')
                         .max(15, 'must be 15 characters or less')
@@ -133,15 +145,15 @@ function SignUpForms() {
                 })}
                 onSubmit={(values, { setSubmitting, resetForm }) => {
                     setTimeout(() => {
-                        alert(JSON.stringify(values, null, 2));
+                        UserFunction(values)
                         resetForm();
                         setSubmitting(false)
                     }, 3000)
                 }}
             >
                 {props => (
-             
-                    <Form>
+
+                    <Form1>
                         <h1>SIGN UP</h1>
                         <Form.Row>
                             <CustomTextInput label="First Name" name="firstName" type="text" placeholder=" Bruce" />
@@ -181,9 +193,9 @@ function SignUpForms() {
                         <Row>
                             <CustomSelect label="Fitness Level" name="fitnessLevel">
                                 <option value="">Please Select</option>
-                                <option value="Male">Beginner</option>
-                                <option value="Female">Intermediate</option>
-                                <option value="Prefer not to say">Advanced</option>
+                                <option value="Beginner">Beginner</option>
+                                <option value="Intermediate">Intermediate</option>
+                                <option value="Advanced">Advanced</option>
                             </CustomSelect>
                         </Row>
 
@@ -199,7 +211,7 @@ function SignUpForms() {
                                 <Button variant="flat" type="submit">{props.isSubmitting ? 'Loading...' : 'Login'}</Button>
                             </Form.Group>
                         </Form.Row>
-                    </Form>
+                    </Form1>
                 )}
             </Formik>
         </Styles>
