@@ -207,7 +207,7 @@ function SignUpForms() {
                                 <Button variant="signUpCancel" href="/" type="submit">{props.isSubmitting ? 'Loading...' : 'Back'}</Button>
                             </Form.Group>
                             <Form.Group as={Col}>
-                                <Button variant="flat" type="submit">{props.isSubmitting ? 'Loading...' : 'Login'}</Button>
+                                <Button variant="flat" type="submit">{props.isSubmitting ? 'Loading...' : 'Register'}</Button>
                             </Form.Group>
                         </Form.Row>
                     </Form1>
