@@ -18,7 +18,7 @@ export const FirstSection = () => (
                                     accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
                                     quae ab illo inventore veritatis et quasi architecto beatae vitae dicta.
                             </Card.Text>
-                                <Button variant="flat" size=""> Join Us </Button>
+                                <Button variant="flat" size="" href="/signup"> Join Us </Button>
                             </Card.Body>
                         </Card>
                     </CardDeck>
