@@ -2,9 +2,20 @@ import React from 'react';
 import { Form, Button, Col } from 'react-bootstrap';
 import { Styles } from './EditForms'
 // import { } from 'react-bootstrap';
-import { Formik, useField } from 'formik';
+import { Formik, useField, Form as Form1 } from 'formik';
 import * as Yup from 'yup'
 import '../../index.css'
+import API from "../../utils/API";
+
+
+const UserSigninFunction = (values) => {
+    API.UserSigninFunction(values)
+        .then(res => {
+            window.location.href = '/main';
+        }
+        )
+        .catch(err => alert("Unable to login. Username or password is not correct"));
+}
 
 const CustomTextInput = ({ label, ...props }) => {
     const [field, meta] = useField(props);
@@ -43,44 +54,36 @@ function SignInForms() {
             <Formik
                 initialValues={{
                     email: '',
-                    acceptedTerms: false,
                     password: '',
                 }}
                 validationSchema={Yup.object({
- 
+
                     email: Yup.string()
                         .email('Invalid email address')
                         .required('Required'),
                     password: Yup.string()
-                        .required("Please enter your password")
-                        .matches(
-                            /^.*(?=.{8,})((?=.*[!@#$%^&*()\-_=+{};:,<.>]){1})(?=.*\d)((?=.*[a-z]){1})((?=.*[A-Z]){1}).*$/,
-                            "Invalid Password"
-                        ),
-                    acceptedTerms: Yup.boolean()
-                        .required('Required')
-                        .oneOf([true], 'You must accept terms and conditions'),
+                        .required("Please enter your password"),
                 })}
                 onSubmit={(values, { setSubmitting, resetForm }) => {
                     setTimeout(() => {
-                        alert(JSON.stringify(values, null, 2));
+                        UserSigninFunction(values)
                         resetForm();
                         setSubmitting(false)
                     }, 3000)
                 }}
             >
                 {props => (
-                    <Form>
-                    <Form.Row>
-                        <CustomTextInput label="Login" name="email" type="email" placeholder=" batman@gmail.com" />
-                    </Form.Row>
-                    <Form.Row>
-                        <CustomTextInput label="Password" name="password" type="password" placeholder=" ******" />
-                    </Form.Row>
+                    <Form1>
+                        <Form.Row>
+                            <CustomTextInput label="Login" name="email" type="email" placeholder=" batman@gmail.com" />
+                        </Form.Row>
+                        <Form.Row>
+                            <CustomTextInput label="Password" name="password" type="password" placeholder=" ******" />
+                        </Form.Row>
                         <Form.Group>
                             <Button variant="flat" className="col text-center mt-3" type="submit">{props.isSubmitting ? 'Loading...' : 'Login'}</Button>
                         </Form.Group>
-                    </Form>
+                    </Form1>
                 )}
 
             </Formik>
