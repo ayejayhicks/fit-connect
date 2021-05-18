@@ -1,7 +1,7 @@
 import React from 'react';
-import { Image, Col } from 'react-bootstrap';
+import { Col } from 'react-bootstrap';
 import './SignUpImg.css'
-import image from '../../Assets/img1.jpg'
+// import image from '../../Assets/img1.jpg'
 
 export const SignUpImg = (props) => (
     <Col>

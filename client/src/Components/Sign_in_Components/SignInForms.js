@@ -31,21 +31,21 @@ const CustomTextInput = ({ label, ...props }) => {
     )
 }
 
-const CustomCheckBox = ({ children, ...props }) => {
-    const [field, meta] = useField(props, 'checkbox');
+// const CustomCheckBox = ({ children, ...props }) => {
+//     const [field, meta] = useField(props, 'checkbox');
 
-    return (
-        <>
-            <label className="checkbox">
-                <input type="checkbox" {...field} {...props} />
-                {children}
-            </label>
-            {meta.touched && meta.error ? (
-                <div className="error">{meta.error}</div>
-            ) : null}
-        </>
-    )
-}
+//     return (
+//         <>
+//             <label className="checkbox">
+//                 <input type="checkbox" {...field} {...props} />
+//                 {children}
+//             </label>
+//             {meta.touched && meta.error ? (
+//                 <div className="error">{meta.error}</div>
+//             ) : null}
+//         </>
+//     )
+// }
 
 
 function SignInForms() {
