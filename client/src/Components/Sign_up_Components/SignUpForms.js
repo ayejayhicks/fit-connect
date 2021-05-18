@@ -2,7 +2,7 @@ import React from 'react';
 import { Form, Button, Row, Col } from 'react-bootstrap';
 import { Styles } from './EditSignUpForms'
 // import { } from 'react-bootstrap';
-import { Formik, useField } from 'formik';
+import { Formik, useField, Form as Form1 } from 'formik';
 import * as Yup from 'yup'
 import '../../index.css'
 
@@ -141,7 +141,7 @@ function SignUpForms() {
             >
                 {props => (
              
-                    <Form>
+                    <Form1>
                         <h1>SIGN UP</h1>
                         <Form.Row>
                             <CustomTextInput label="First Name" name="firstName" type="text" placeholder=" Bruce" />
@@ -181,9 +181,9 @@ function SignUpForms() {
                         <Row>
                             <CustomSelect label="Fitness Level" name="fitnessLevel">
                                 <option value="">Please Select</option>
-                                <option value="Male">Beginner</option>
-                                <option value="Female">Intermediate</option>
-                                <option value="Prefer not to say">Advanced</option>
+                                <option value="Beginner">Beginner</option>
+                                <option value="Intermediate">Intermediate</option>
+                                <option value="Advanced">Advanced</option>
                             </CustomSelect>
                         </Row>
 
@@ -199,7 +199,7 @@ function SignUpForms() {
                                 <Button variant="flat" type="submit">{props.isSubmitting ? 'Loading...' : 'Login'}</Button>
                             </Form.Group>
                         </Form.Row>
-                    </Form>
+                    </Form1>
                 )}
             </Formik>
         </Styles>

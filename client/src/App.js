@@ -9,6 +9,7 @@ import SignUp from './Pages/SignUp';
 import './App.css'
 import './index.css'
 
+
 class App extends Component {
   render() {
     return (
