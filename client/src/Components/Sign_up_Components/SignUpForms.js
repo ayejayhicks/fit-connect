@@ -11,8 +11,7 @@ import API from "../../utils/API";
 // Technology Formik: 
 // Technology Yup: 
 const UserFunction = (values) => {
-    alert("here");
-    alert(JSON.stringify(values, null, 2));
+    
     API.saveUser(values)
         .then(res => {
             window.location.href = '/signin';

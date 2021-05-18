@@ -25,6 +25,16 @@ export default {
     });
   },
 
+  UserSigninFunction: function (values) {
+    return axios.post('/api/login', {
+      
+      email: values.email,
+      password: values.password,
+      
+      
+      
+    });
+  },
 
   
 };
