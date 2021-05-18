@@ -9,7 +9,7 @@ export const FooterContent = (props) => (
         <Row>
             <Col xs={4} className="footerColumn1">
                 <ul className="list-unstyled">
-                    <h6>About Us</h6>
+                    <h6 id="about">About Us</h6>
                     <li className="bodyTextFooter"> Sed ut perspiciatis unde omnis iste natus error sit voluptatem
                     accusantium doloremq laudantium, totam rem aperiam, eaque ipsa
                     quae ab illo inventore veritatis et quasi architecto</li>

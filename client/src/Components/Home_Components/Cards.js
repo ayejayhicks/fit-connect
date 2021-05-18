@@ -9,7 +9,7 @@ import "./Cards.css"
 
 export const Cards = () => (
     <>
-        <CardDeck className="text-center alignCard">
+        <CardDeck id="features" className="text-center alignCard">
             <Card className="border-0 align-items-center">
                 <Card.Img className="" id="sizeCardImg" variant="top" src={cardImage} />
                 <Card.Body>

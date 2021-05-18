@@ -1,7 +1,8 @@
 import React from 'react'
 import { Nav, Navbar, Button } from 'react-bootstrap'
 import "./NavigationBar.css";
-import navBarImage from "../../Assets/fitness-navbar.svg"
+import navBarImage from "../../Assets/fitness-navbar.svg";
+import { scroller } from 'react-scroll';
 
 export const NavigationBar = () => (
     <>
@@ -19,8 +20,26 @@ export const NavigationBar = () => (
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse >
                 <Nav className="ml-auto">
-                    <Nav.Link className="textNavBar" href="/">About</Nav.Link>
-                    <Nav.Link className="textNavBar" href="/">Features</Nav.Link>
+                    <Nav.Link
+                      onClick={(e) => {
+                        e.preventDefault()
+                        scroller.scrollTo('about', {
+                          smooth: true
+                        })
+                      }}
+                      className="textNavBar">
+                      About
+                    </Nav.Link>
+                    <Nav.Link
+                      onClick={(e) => {
+                        e.preventDefault()
+                        scroller.scrollTo('features', {
+                          smooth: true
+                        })
+                      }}
+                      className="textNavBar">
+                      Features
+                    </Nav.Link>
                     <Nav.Link className="textNavBar" href="/signin">Login</Nav.Link>
                     <Button variant="flat" href="/signup"> Sign Up </Button>
                 </Nav>
