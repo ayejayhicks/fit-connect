@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
 import { Form, Button, Row, Col } from 'react-bootstrap';
 import { Styles } from '../Sign_up_Components/EditSignUpForms'
-// import { } from 'react-bootstrap';
 import { Formik, useField, Form as Form1 } from 'formik';
 import * as Yup from 'yup'
 import '../../index.css'
 import API from "../../utils/API";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-
 
 
 const UserFunction = (values) => {
@@ -78,19 +76,23 @@ function CreateEventForm(date) {
         <Styles>
             <Formik
                 initialValues={{
+                    eventName: '',
                     typeOfEvent: '',
                     descriptionOfEvent: '',
                     date: '',
                     time: '',
                     duration: '',
                     level: '',
-                    maxParticipants: '',
+                    participants: '',
+                    eventLocation: '',
 
                 }}
                 validationSchema={Yup.object({
                     eventName: Yup.string()
                         .min(3, 'Must be at least 3 characters')
                         .max(15, 'must be 15 characters or less')
+                        .required('Required'),
+                    eventCity: Yup.string()
                         .required('Required'),
                     typeOfEvent: Yup.string()
                         .oneOf(['Yoga', 'Hiking', 'Walk', 'Running', 'MountainBiking', 'Biking', 'WeightLifting', 'GymClass'])
@@ -108,6 +110,8 @@ function CreateEventForm(date) {
                         .required('Required'),
                     participants: Yup.number()
                         .oneOf([5, 10, 15, 20])
+                        .required('Required'),
+                    eventLocation: Yup.string()
                         .required('Required'),
                     
                     
@@ -201,10 +205,9 @@ function CreateEventForm(date) {
                             </CustomSelect>
                         </Row>
 
-                        
-
-
-                      
+                        <Form.Row>
+                            <CustomTextInput label="Event Location" name="eventLocation" descriptionOfEvent="text" placeholder="Add location to your event" />
+                        </Form.Row>
 
                         <Form.Row>
                             <Form.Group as={Col}>
