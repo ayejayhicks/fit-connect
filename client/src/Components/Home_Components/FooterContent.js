@@ -27,18 +27,18 @@ export const FooterContent = (props) => (
             </Col>
 
             {/* Column 3 */}
-            <Col xs={5}>
-                <Form>
+            <Col xs={5} className="footerColumn2">
+                <Form action="https://formsubmit.co/el/fawoyo" method="POST">
+                    <input type="hidden" name="_captcha" value="false"></input>
                     <Form.Group controlId="formBasicEmail">
                         <Form.Label>Contact</Form.Label>
-                        <Form.Control type="email" placeholder="Email" />
+                        <Form.Control type="email" placeholder="Email" required />
                     </Form.Group>
-
                     <Form.Group controlId="exampleForm.ControlTextarea1">
                         <Form.Label>Message</Form.Label>
-                        <Form.Control as="textarea" rows={3} />
+                        <Form.Control as="textarea" rows={3} required />
                     </Form.Group>
-                    <Button variant="primary" type="submit">
+                    <Button variant="primary" type="submit"  >
                         Submit
                 </Button>
                 </Form>

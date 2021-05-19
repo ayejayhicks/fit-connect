@@ -1,8 +1,9 @@
 .footerMargin {
     font-family: roboto;
-    position: absolute!important;
+    position: absolute;
     bottom: auto;
-    padding: 4vh;
+    margin-bottom: -30px;
+    padding: 2vh;
     background-color: #F3F3F3;
     width: 105% !important;
 }
@@ -13,4 +14,18 @@
 
 .footerColumn1 {
     margin-top: 10px;
+}
+
+@media (max-width: 700px){
+    .footerMargin{
+        flex-direction: column; 
+    } 
+    .footerColumn1{
+        order: 1; 
+        width: 100%; 
+    }
+    .footerColumn2{
+        order: 2; 
+        width: 100%; 
+    }
 }

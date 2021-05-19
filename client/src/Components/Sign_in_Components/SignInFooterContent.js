@@ -4,7 +4,7 @@ import './SignInFooter.css'
 
 export const SignInFooterContent = (props) => (
 
-    <Container>
+    <Container className="signInContainer">
         {/* Column 1 */}
         <Row>
             <Col xs={4} className="footerColumn1">
@@ -27,7 +27,7 @@ export const SignInFooterContent = (props) => (
             </Col>
 
             {/* Column 3 */}
-            <Col xs={5}>
+            <Col xs={5} className="footerColumn2">
                 <Form>
                     <Form.Group controlId="formBasicEmail">
                         <Form.Label>Contact</Form.Label>

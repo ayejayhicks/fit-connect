@@ -7,7 +7,7 @@ const EventSchema = new Schema({
   eventType: {
     type: String,
     trim: true,
-    enum: ['run', '5k', 'hiit', 'yoga', 'biking', 'strength training'],
+    enum: ['run', '5k', 'hit', 'yoga', 'biking', 'strength training'],
     required: true
   },
   city: {

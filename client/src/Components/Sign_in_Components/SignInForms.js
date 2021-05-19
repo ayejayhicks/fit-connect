@@ -1,5 +1,5 @@
 import React from 'react';
-import { Form, Button, Col } from 'react-bootstrap';
+import { Form, Button, Col, Container, Row } from 'react-bootstrap';
 import { Styles } from './EditForms'
 // import { } from 'react-bootstrap';
 import { Formik, useField, Form as Form1 } from 'formik';
@@ -50,8 +50,13 @@ const CustomTextInput = ({ label, ...props }) => {
 
 function SignInForms() {
     return (
+      <Container>
+        <Row className="signInContainerForm">
+            <Col md={4} xs={2}>
+                </Col>
+            <Col md={4} xs={8}>
         <Styles>
-            <Formik
+            <Formik 
                 initialValues={{
                     email: '',
                     password: '',
@@ -72,8 +77,9 @@ function SignInForms() {
                     }, 3000)
                 }}
             >
+            
                 {props => (
-                    <Form1>
+                            <Form1>
                         <Form.Row>
                             <CustomTextInput label="Login" name="email" type="email" placeholder=" batman@gmail.com" />
                         </Form.Row>
@@ -88,6 +94,12 @@ function SignInForms() {
 
             </Formik>
         </Styles>
+        </Col>
+            <Col md={4} xs={2}>
+                </Col>
+            </Row>
+        </Container>
+ 
     )
 }
 
