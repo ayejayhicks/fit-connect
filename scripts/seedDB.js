@@ -11,7 +11,7 @@ const eventSeed = [
     enrollmentCapacity: "5",
     city: "Cumming",
     fitnessLevel: "Beginner",
-    date: "2021-06-19T13:04:00",
+    date: "2021-07-19T13:04:00",
     location: "122 red lane, Cumming, GA"
   },
   {
@@ -19,7 +19,7 @@ const eventSeed = [
     enrollmentCapacity: "10",
     city: "Atlanta",
     fitnessLevel: "Intermediate",
-    date: "2021-06-19T13:04:00",
+    date: "2021-06-19T23:04:00",
     location: "321 blue lane, Atlanta, GA"
   },
   {
@@ -27,7 +27,7 @@ const eventSeed = [
     enrollmentCapacity: "9",
     city: "Sandy Spring",
     fitnessLevel: "Advanced",
-    date: "2021-06-19T13:04:00",
+    date: "2021-06-01T13:04:00",
     location: "1212 robin lane, Sandy Spring, CA"
   },
   {
@@ -35,7 +35,7 @@ const eventSeed = [
     enrollmentCapacity: "6",
     city: "New York",
     fitnessLevel: "Beginner",
-    date: "2021-06-19T13:04:00",
+    date: "2021-06-20T03:04:00",
     location: "4124 ivy lane, New York, GA"
   },
   {
@@ -43,7 +43,7 @@ const eventSeed = [
     enrollmentCapacity: "5",
     city: "Chicago",
     fitnessLevel: "Beginner",
-    date: "2021-06-19T13:04:00",
+    date: "2021-06-22T13:20:00",
     location: "1234 bluejay lane, Chicago, GA"
   },
 ];
