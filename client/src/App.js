@@ -6,6 +6,7 @@ import Login from './Pages/Login';
 import Main from './Pages/Main';
 import SignIn from './Pages/SignIn';
 import SignUp from './Pages/SignUp';
+import CreateEventForm from './Pages/CreateEvent'
 
 import './App.css'
 import './index.css'
@@ -21,6 +22,7 @@ class App extends Component {
                 <Route exact path="/main" component={Main} />
                 <Route exact path="/signin" component={SignIn} />
                 <Route exact path="/signup" component={SignUp} />
+                <Route exact path="/createEvent" component={CreateEventForm} />
               </Switch>
             </Router>
       </React.Fragment>

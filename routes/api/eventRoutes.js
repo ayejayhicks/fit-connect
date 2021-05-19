@@ -13,7 +13,7 @@ router.get("/", async (req, res) => {
 });
 
 // POST: /api/events
-router.post("/", async (req, res) => {
+router.post("./Pages/CreateEvent", async (req, res) => {
   try {
     const event = await db.Event.create(req.body);
     res.json(event);

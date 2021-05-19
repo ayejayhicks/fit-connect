@@ -1,4 +1,4 @@
-git import React from 'react';
+import React from 'react';
 import { NavigationBar } from '../Components/Home_Components/NavigationBar';
 import { SignInFooterSection } from '../Components/Sign_in_Components/SignInFooter';
 import { SignInFooterContent } from '../Components/Sign_in_Components/SignInFooterContent';
