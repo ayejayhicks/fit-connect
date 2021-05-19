@@ -7,7 +7,7 @@ const EventSchema = new Schema({
   eventType: {
     type: String,
     trim: true,
-    enum: ['run', '5k', 'hit', 'yoga', 'biking', 'strength training'],
+    enum: ['Run', '5k', 'Hiking', 'Hit', 'Yoga', 'Biking', 'Strength training'],
     required: true
   },
   city: {
@@ -21,7 +21,7 @@ const EventSchema = new Schema({
   },
   fitnessLevel: {
     type: String,
-    enum: ['beginner', 'intermediate', 'advanced'],
+    enum: ['Beginner', 'Intermediate', 'Advanced'],
     required: true
   },
   enrollmentCapacity: {
@@ -29,6 +29,10 @@ const EventSchema = new Schema({
     min: 1,
     max: 10,
     required: true
+  },
+  location: {
+    type:String,
+    trim: true
   }
 }, opts);
 
