@@ -193,10 +193,10 @@ export const MainCards = () => (
                         <Col>
 
                         </Col>
-
                     </Card.Body>
                 </Card>
             </Col>
+        </Row>
         </Row>
     </>
 );
