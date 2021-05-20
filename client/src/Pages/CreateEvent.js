@@ -4,7 +4,7 @@ import { SignInFooterSection } from '../Components/Sign_in_Components/SignInFoot
 import { SignInFooterContent } from '../Components/Sign_in_Components/SignInFooterContent';
 import  CreateEventForm from '../Components/Create_Event_Components/CreateEventForm'
 import { Layout } from '../Components/Home_Components/Layout'
-import { mainCards } from '../Components/Main_Components/MainCards'
+
 
 
 const CreateEvent = () => {
