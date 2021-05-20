@@ -28,6 +28,10 @@ export default {
       password
     });
   },
+  logout: function () {
+    return axios.post('/api/logout', {
+    });
+  },
   getEvents: function () {
     return axios.get('/api/events');
   },
