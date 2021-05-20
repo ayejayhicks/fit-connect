@@ -7,7 +7,7 @@ import AuthService from '../../utils/AuthService';
 import API from '../../utils/API';
 
 class NavigationBar extends Component {
-  
+
   constructor(props) {
     super(props);
     console.log(this.props);
@@ -18,17 +18,28 @@ class NavigationBar extends Component {
       .then(res => {
         AuthService.logout();
         window.location.href = '/';
-        return 
+        return
       }
       )
       .catch(err => console.log(err));
   };
 
   render() {
-    console.log("Logged in?");
     const logged_in = AuthService.isLoggedIn();
-    console.log(logged_in);
     let navLinks = "";
+    let featureLink = "";
+    if (window.location.pathname === "/" ){
+      featureLink = <Nav.Link
+      onClick={(e) => {
+        e.preventDefault()
+        scroller.scrollTo('features', {
+          smooth: true
+        })
+      }}
+      className="textNavBar">
+      Features
+    </Nav.Link>
+    }
     if (logged_in) {
       navLinks =
         <Nav className="ml-auto">
@@ -42,6 +53,7 @@ class NavigationBar extends Component {
             className="textNavBar">
             About
       </Nav.Link>
+      {featureLink}
           <Nav.Link className="textNavBar" href="/main"> Events </Nav.Link>
           <Nav.Link className="textNavBar" onClick={this.handleLogout}> Logout </Nav.Link>
         </Nav>
@@ -58,6 +70,7 @@ class NavigationBar extends Component {
             className="textNavBar">
             About
       </Nav.Link>
+      {featureLink}
           <Nav.Link className="textNavBar" href="/signin">Login</Nav.Link>
           <Button variant="flat" href="/signup"> Sign Up </Button>
         </Nav >
