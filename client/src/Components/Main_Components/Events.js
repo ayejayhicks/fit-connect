@@ -1,52 +1,88 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 import API from "../../utils/API";
 import { Card, Col, Row, Button } from 'react-bootstrap'
+import { useUserContext } from "../../utils/GlobalState";
 const moment = require('moment');
 
-class Events extends Component {
-    state = {
-        events: "",
-    };
+function Events() {
+    const [state, dispatch] = useUserContext();
+    const [events, setEvents] = useState([]);
+    // This is set to true by default to indicate that events load on page load
+    const [isLoadingEvents, setIsLoadingEvents] = useState(true);
+    const [registerUserForEvent, setRegisterUserForEvent] = useState({ userId: null, eventId: null })
 
-    // When the component mounts, load the next dog to be displayed
-    componentDidMount() {
-        this.loadEvents();
-    }
+    useEffect(() => {
+        if (!isLoadingEvents) {
+            return;
+        }
 
-    loadEvents = () => {
-        API.getEvents()
-            .then(res => {
-                //alert(res.data);
-                return this.setState({
-                    events: res.data
-                });
+        setIsLoadingEvents(false);
+
+        const loadEvents = async () => {
+            try {
+                const { status, data: events } = await API.getEvents()
+                if (status === 200 && events?.length > 0) {
+                    setEvents(events)
+                } else {
+                    alert('Sorry, an error occurred loading events. Please try again.')
+                }
+            } catch (error) {
+                console.log('error', error);
+                alert('Sorry, an error occurred loading events. Please try again.')
             }
-            )
-            .catch(err => console.log(err));
-    };
+        };
 
+        loadEvents();
+    }, [isLoadingEvents])
 
-    render() {
-        let cards = "";
-        if (this.state.events) {
-            cards = this.state.events.map(function (element) {
-                const eventdate = new Date(element.date);
-                return <Col md={4}>
+    useEffect(() => {
+        const { userId, eventId } = registerUserForEvent;
+        console.log('eventId', eventId);
+        console.log('userId', userId);
+        if (!userId || !eventId) {
+            return;
+        }
+
+        setRegisterUserForEvent({eventId: null, userId: null})
+
+        const registerUserRequest = async () => {
+            try {
+                const { status } = await API.registerUserForEvent(eventId, userId)
+                if (status === 200) {
+                    // TODO: Need to figure out what should happen after a user has successfully register for an event?????
+                    alert("You've successfully registered for this event! Woo hoo!");
+                } else {
+                    alert('Uh oh, something went wrong. Please try again.');
+                }
+            } catch (error) {
+                console.log('error', error);
+                alert('Uh oh, something went wrong. Please try again.');
+            }
+        }
+
+        registerUserRequest();
+    }, [registerUserForEvent])
+
+    const eventCards = () => {
+        return events.map(event => {
+            console.log('event', event);
+            const eventdate = new Date(event.date);
+            return <Col md={4}>
                 <Card style={{ width: '20rem' }} className="bg-dark text-white mb-5 mt-5 ml-5 mr-5">
                     <Card.Img variant="top" src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0oTz2p2B3qG8hkzcfoWijkNQn38UxGZZZDw&usqp=CAU"} alt="Card Image" />
                     <Card.ImgOverlay>
-                        <h2 className="CardTitle">{element.eventType}</h2>
+                        <h2 className="CardTitle">{event.eventType}</h2>
                     </Card.ImgOverlay>
                     <Card.Body>
 
                         <Row>
                             <Col>
                                 <Card.Title>Event</Card.Title>
-                                <Card.Text className="eventName"> {element.eventType} </Card.Text>
+                                <Card.Text className="eventName"> {event.eventType} </Card.Text>
                             </Col>
                             <Col>
                                 <Card.Title>Enrolled</Card.Title>
-                                <Card.Text className="participants"> {element.enrollmentCapacity}/10 </Card.Text>
+                                <Card.Text className="participants"> {event.enrollmentCapacity}/10 </Card.Text>
                             </Col>
                         </Row>
                     </Card.Body>
@@ -55,11 +91,11 @@ class Events extends Component {
                         <Row>
                             <Col>
                                 <Card.Title>City</Card.Title>
-                                <Card.Text className="eventCity">  {element.city} </Card.Text>
+                                <Card.Text className="eventCity">  {event.city} </Card.Text>
                             </Col>
                             <Col>
                                 <Card.Title>Level</Card.Title>
-                                <Card.Text className="level">  {element.fitnessLevel} </Card.Text>
+                                <Card.Text className="level">  {event.fitnessLevel} </Card.Text>
                             </Col>
                         </Row>
                     </Card.Body>
@@ -78,12 +114,20 @@ class Events extends Component {
 
                     <Card.Body>
                         <Card.Title>Event Location</Card.Title>
-                        <Card.Text> {element.location} </Card.Text>
+                        <Card.Text> {event.location} </Card.Text>
                     </Card.Body>
                     <Card.Body>
 
                         <Col>
-                            <Button variant="flat" className="container-xl" href="#">Register</Button>
+                            <Button
+                                variant="flat"
+                                className="container-xl"
+                                onClick={(e) => {
+                                    e.preventDefault()
+                                    setRegisterUserForEvent({eventId: event.id, userId: state.id})
+                                }}>
+                                Register
+                            </Button>
                         </Col>
                         <Col>
 
@@ -92,10 +136,12 @@ class Events extends Component {
                     </Card.Body>
                 </Card>
             </Col>
-            });
-        }
-        return (<Row>{cards}</Row>);
+        })
     }
+
+    return (
+        <Row>{eventCards()}</Row>
+    );
 }
 
 export default Events;
