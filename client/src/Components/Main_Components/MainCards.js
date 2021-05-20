@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, Col, Row, Button, H1 } from 'react-bootstrap'
+import { Col, Row, Button } from 'react-bootstrap'
 // import './MainCards.css'
 import '../../index.css'
 import Events from './Events'
@@ -7,12 +7,16 @@ import Events from './Events'
 
 export const MainCards = () => (
     <>
-
-        <h1 className="mt-5">
-            UPCOMING EVENTS
+        <Row>
+            <Col>
+                <h1 className="mt-5 ">
+                    UPCOMING EVENTS
   </h1>
-
+            </Col>
+            <Col>
+                <Button size="lg" variant="danger" className="createEventButton mt-5  float-right" href="/createEvent" block> Create Event</Button>
+            </Col>
+        </Row>
         <Events />
-
     </>
 );
