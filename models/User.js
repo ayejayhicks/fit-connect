@@ -8,7 +8,7 @@ const UserSchema = new Schema({
     type: String,
     trim: true
   },
- lastName: {
+  lastName: {
     type: String,
     trim: true
   },
@@ -22,37 +22,36 @@ const UserSchema = new Schema({
     unique: true,
     required: true,
     trim: true
-},
-password: {
-  type: String,
-  required: true
-},
-age: {
-  type: Number
-},
-gender: {
-  type: String
-},
-city: {
-  type: String
-},
-zipCode: {
-  type: String
-},
-emergencyContact: {
-  type: String
-},
-phoneNumberOfEmergency:{
-type: String
-
-},
-fitnessLevel:  {
-  type: String
-}
-
+  },
+  password: {
+    type: String,
+    required: true
+  },
+  age: {
+    type: Number
+  },
+  gender: {
+    type: String
+  },
+  city: {
+    type: String
+  },
+  zipCode: {
+    type: String
+  },
+  emergencyContact: {
+    type: String
+  },
+  phoneNumberOfEmergency: {
+    type: String
+  },
+  fitnessLevel: {
+    type: String
+  },
+  events: [{ type: Schema.Types.ObjectId, ref: 'Event' }]
 }, opts);
 
-UserSchema.pre('save', function(next) {
+UserSchema.pre('save', function (next) {
   console.log("Save Hook invoked");
   this.password = bcrypt.hashSync(this.password, 10);
   next();

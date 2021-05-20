@@ -6,7 +6,8 @@ import Login from './Pages/Login';
 import Main from './Pages/Main';
 import SignIn from './Pages/SignIn';
 import SignUp from './Pages/SignUp';
-import CreateEventForm from './Pages/CreateEvent'
+import CreateEventForm from './Pages/CreateEvent';
+import { UserProvider } from './utils/GlobalState';
 
 import './App.css'
 import './index.css'
@@ -14,18 +15,20 @@ import './index.css'
 class App extends Component {
   render() {
     return (
-      <React.Fragment>
-            <Router>
-              <Switch>
-                <Route exact path="/" component={Home} />
-                <Route exact path="/login" component={Login} />
-                <Route exact path="/main" component={Main} />
-                <Route exact path="/signin" component={SignIn} />
-                <Route exact path="/signup" component={SignUp} />
-                <Route exact path="/createEvent" component={CreateEventForm} />
-              </Switch>
-            </Router>
-      </React.Fragment>
+      <UserProvider>
+        <React.Fragment>
+          <Router>
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route exact path="/login" component={Login} />
+              <Route exact path="/main" component={Main} />
+              <Route exact path="/signin" component={SignIn} />
+              <Route exact path="/signup" component={SignUp} />
+              <Route exact path="/createEvent" component={CreateEventForm} />
+            </Switch>
+          </Router>
+        </React.Fragment>
+      </UserProvider>
     );
   }
 }
