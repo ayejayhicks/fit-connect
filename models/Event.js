@@ -3,11 +3,10 @@ const Schema = mongoose.Schema;
 
 const opts = { toJSON: { virtuals: true } };
 const EventSchema = new Schema({
-  // TODO: Update this to have the necessary fields that make of an "Event"
   eventType: {
     type: String,
     trim: true,
-    enum: ['Run', '5k', 'Hiking', 'Hit', 'Yoga', 'Biking', 'Strength training'],
+    enum: ['Run', '5k', 'Hiking', 'Hiit', 'Yoga', 'Biking', 'Strength Training'],
     required: true
   },
   city: {
@@ -33,7 +32,8 @@ const EventSchema = new Schema({
   location: {
     type:String,
     trim: true
-  }
+  },
+  users: [{ type: Schema.Types.ObjectId, ref: 'User' }]
 }, opts);
 
 const Event = mongoose.model("Event", EventSchema);
