@@ -20,19 +20,22 @@ export default {
       emergencyContact: values.emergencyContact,
       phoneNumberOfEmergency: values.phoneNumberOfEmergency,
       fitnessLevel: values.fitnessLevel
-      
-      
     });
   },
-
-  UserSigninFunction: function (values) {
+  signin: function ({ email, password }) {
     return axios.post('/api/login', {
-      email: values.email,
-      password: values.password,
+      email,
+      password
+    });
+  },
+  logout: function () {
+    return axios.post('/api/logout', {
     });
   },
   getEvents: function () {
     return axios.get('/api/events');
+  },
+  registerUserForEvent: function (eventId) {
+    return axios.post(`/api/events/${eventId}/register`)
   }
-  
 };

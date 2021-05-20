@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavigationBar } from '../Components/Home_Components/NavigationBar';
+import { LoggedNavigationBar } from '../Components/Main_Components/LoggedNavigationBar';
 import { SignInFooterSection } from '../Components/Sign_in_Components/SignInFooter';
 import { SignInFooterContent } from '../Components/Sign_in_Components/SignInFooterContent';
 import  CreateEventForm from '../Components/Create_Event_Components/CreateEventForm'
@@ -11,9 +11,10 @@ const CreateEvent = () => {
     return (
         <React.Fragment>
             {/* Navigation Bar */}
-
-                <NavigationBar>
-                </NavigationBar>
+            <Layout>
+                <LoggedNavigationBar>
+                </LoggedNavigationBar>
+            </Layout>
             <Layout>
             <CreateEventForm>
 

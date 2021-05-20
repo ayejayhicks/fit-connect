@@ -20,28 +20,9 @@ export const LoggedNavigationBar = () => (
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse >
                 <Nav className="ml-auto">
-                    <Nav.Link
-                        onClick={(e) => {
-                            e.preventDefault()
-                            scroller.scrollTo('about', {
-                                smooth: true
-                            })
-                        }}
-                        className="textNavBar">
-                        About
-                    </Nav.Link>
-                    <Nav.Link
-                        onClick={(e) => {
-                            e.preventDefault()
-                            scroller.scrollTo('features', {
-                                smooth: true
-                            })
-                        }}
-                        className="textNavBar">
-                        Features
-                    </Nav.Link>
                    
-                    <Button variant="flat" href="/signup"> Sign Up </Button>
+
+                    <Button variant="flat" href="/"> Logout </Button>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>
