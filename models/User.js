@@ -52,8 +52,10 @@ const UserSchema = new Schema({
 }, opts);
 
 UserSchema.pre('save', function (next) {
-  console.log("Save Hook invoked");
-  this.password = bcrypt.hashSync(this.password, 10);
+  if (this.isNew) {
+    console.log("Save Hook invoked");
+    this.password = bcrypt.hashSync(this.password, 10);
+  }
   next();
 });
 
