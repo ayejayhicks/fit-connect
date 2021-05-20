@@ -31,7 +31,7 @@ export default {
   getEvents: function () {
     return axios.get('/api/events');
   },
-  registerUserForEvent: function (eventId, userId) {
-    return axios.post(`/api/events/${eventId}/register/${userId}`)
+  registerUserForEvent: function (eventId) {
+    return axios.post(`/api/events/${eventId}/register`)
   }
 };

@@ -1,15 +1,13 @@
 import React, { useState, useEffect } from "react";
 import API from "../../utils/API";
-import { Card, Col, Row, Button } from 'react-bootstrap'
-import { useUserContext } from "../../utils/GlobalState";
+import { Card, Col, Row, Button } from 'react-bootstrap';
 const moment = require('moment');
 
 function Events() {
-    const [state, dispatch] = useUserContext();
     const [events, setEvents] = useState([]);
     // This is set to true by default to indicate that events load on page load
     const [isLoadingEvents, setIsLoadingEvents] = useState(true);
-    const [registerUserForEvent, setRegisterUserForEvent] = useState({ userId: null, eventId: null })
+    const [registerUserForEvent, setRegisterUserForEvent] = useState(null)
 
     useEffect(() => {
         if (!isLoadingEvents) {
@@ -36,18 +34,17 @@ function Events() {
     }, [isLoadingEvents])
 
     useEffect(() => {
-        const { userId, eventId } = registerUserForEvent;
+        const eventId = registerUserForEvent;
         console.log('eventId', eventId);
-        console.log('userId', userId);
-        if (!userId || !eventId) {
+        if (!eventId) {
             return;
         }
 
-        setRegisterUserForEvent({eventId: null, userId: null})
+        setRegisterUserForEvent(null)
 
         const registerUserRequest = async () => {
             try {
-                const { status } = await API.registerUserForEvent(eventId, userId)
+                const { status } = await API.registerUserForEvent(eventId)
                 if (status === 200) {
                     // TODO: Need to figure out what should happen after a user has successfully register for an event?????
                     alert("You've successfully registered for this event! Woo hoo!");
@@ -124,7 +121,7 @@ function Events() {
                                 className="container-xl"
                                 onClick={(e) => {
                                     e.preventDefault()
-                                    setRegisterUserForEvent({eventId: event.id, userId: state.id})
+                                    setRegisterUserForEvent(event.id)
                                 }}>
                                 Register
                             </Button>
