@@ -1,0 +1,31 @@
+#navBackground {
+    background-color: white;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.textNavBar {
+    font-family: roboto;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: black!important;
+    text-align: center;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.textNavBar:hover {
+    background-color: #F46D10;
+    color: white!important;
+ }
+
+
+.signUpButton {
+      background-color: black;
+      color: white;
+      padding: 0px 10px 0px 10px;
+      margin-left: 10px;
+      font-weight: bold;
+      font-family: roboto;
+    }

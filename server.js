@@ -13,7 +13,7 @@ const port = process.env.PORT || 3001;
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static("client/public"));
+app.use(express.static("client/build"));
 
 // app.get("*", function(req, res) {
 //   res.sendFile(path.join(__dirname, "./client/public/index.html"));
@@ -25,7 +25,7 @@ mongoose.connect(
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
-    useFindAndModify: false
+    useFindAndModify: false, 
   }
 );
 

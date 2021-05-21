@@ -2,25 +2,19 @@ import styled from 'styled-components';
 
 export const Styles = styled.div`
 h1 {
-    text-align: center;
-    color: orange;
+    margin-top: 5vh;
+    margin-bottom: 3vh;
+    color: blue;
     font-family: roboto;
 }
 
-Container {
-    margin-top: 100px;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-   
-    width: 100% ;
-    
+// form {
+//     display: flex;
+//     flex-direction: column;
+//     margin 100px auto;
 
 label {
     font-weight: 500;
-    margin-top: 10px;
     }
 
 input, select {

@@ -10,7 +10,8 @@
     "client": "cd client && npm run start",
     "install": "cd client && npm install",
     "build": "cd client && npm run build",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "npm run build",
+    "seed": "node scripts/seedDB.js"
   },
   "author": "",
   "license": "ISC",
@@ -30,9 +31,11 @@
     "express-session": "^1.17.1",
     "formik": "^2.2.6",
     "if-env": "^1.0.4",
+    "moment": "^2.29.1",
     "mongoose": "^5.12.7",
     "react": "^17.0.2",
     "react-bootstrap": "^1.5.2",
+    "react-datepicker": "^3.8.0",
     "react-dom": "^17.0.2",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",

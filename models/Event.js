@@ -7,6 +7,11 @@ const EventSchema = new Schema({
   eventName: {
     type: String,
     trim: true,
+  }, 
+  eventType: {
+    type: String,
+    trim: true,
+    enum: ['Run', '5k', 'Hiking', 'Hiit', 'Yoga', 'Biking', 'Strength Training'],
     required: true
   },
   typeOfEvent: {
@@ -31,7 +36,7 @@ const EventSchema = new Schema({
   },
   time: {
     type: String,
-    trim: true,
+    enum: ['Beginner', 'Intermediate', 'Advanced'],
     required: true
   },
   duration: {
@@ -55,6 +60,11 @@ const EventSchema = new Schema({
     trim: true,
     required: true
   },
+  location: {
+    type:String,
+    trim: true
+  },
+  users: [{ type: Schema.Types.ObjectId, ref: 'User' }]
 }, opts);
 
 const Event = mongoose.model("Event", EventSchema);

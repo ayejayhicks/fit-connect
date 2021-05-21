@@ -44,17 +44,18 @@ const UserSchema = new Schema({
   },
   phoneNumberOfEmergency: {
     type: String
-
   },
   fitnessLevel: {
     type: String
-  }
-
+  },
+  events: [{ type: Schema.Types.ObjectId, ref: 'Event' }]
 }, opts);
 
 UserSchema.pre('save', function (next) {
-  console.log("Save Hook invoked");
-  this.password = bcrypt.hashSync(this.password, 10);
+  if (this.isNew) {
+    console.log("Save Hook invoked");
+    this.password = bcrypt.hashSync(this.password, 10);
+  }
   next();
 });
 

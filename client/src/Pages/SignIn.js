@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavigationBar } from '../Components/Home_Components/NavigationBar';
+import NavigationBar from '../Components/Home_Components/NavigationBar';
 import { Layout } from '../Components/Sign_in_Components/Layout';
 import SignInForms from '../Components/Sign_in_Components/SignInForms';
 import { SignInFooterSection } from '../Components/Sign_in_Components/SignInFooter';
