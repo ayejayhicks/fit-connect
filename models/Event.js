@@ -8,12 +8,6 @@ const EventSchema = new Schema({
     type: String,
     trim: true,
   }, 
-  eventType: {
-    type: String,
-    trim: true,
-    enum: ['Run', '5k', 'Hiking', 'Hiit', 'Yoga', 'Biking', 'Strength Training'],
-    required: true
-  },
   typeOfEvent: {
     type: String,
     trim: true,
@@ -36,7 +30,6 @@ const EventSchema = new Schema({
   },
   time: {
     type: String,
-    enum: ['Beginner', 'Intermediate', 'Advanced'],
     required: true
   },
   duration: {
@@ -51,11 +44,6 @@ const EventSchema = new Schema({
     required: true
   },
   eventLocation: {
-    type: String,
-    trim: true,
-    required: true
-  },
-  city: {
     type: String,
     trim: true,
     required: true
