@@ -40,7 +40,7 @@ const EventSchema = new Schema({
   participants: {
     type: Number,
     min: 1,
-    max: 10,
+    max: 20,
     required: true
   },
   eventLocation: {
@@ -48,7 +48,7 @@ const EventSchema = new Schema({
     trim: true,
     required: true
   },
-  location: {
+  city: {
     type:String,
     trim: true
   },
