@@ -28,6 +28,7 @@ function reducer(state, action) {
     return user;
   case "signOut":
     console.log('Signing out user', state);
+    AuthService.logout();
     return defaultState;
   default:
     return state;
