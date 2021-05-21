@@ -46,8 +46,9 @@ function Events() {
             try {
                 const { status } = await API.registerUserForEvent(eventId)
                 if (status === 200) {
-                    // TODO: Need to figure out what should happen after a user has successfully register for an event?????
+                    // TODO: Need to figure out what should happen after a user has successfully registered for an event?????
                     alert("You've successfully registered for this event! Woo hoo!");
+                    setIsLoadingEvents(true)
                 } else {
                     alert('Uh oh, something went wrong. Please try again.');
                 }
@@ -118,7 +119,8 @@ function Events() {
                         <Col>
                             <Button
                                 variant="flat"
-                                className="container-xl"
+                                type="button"
+                                className="container-xl event-register-btn"
                                 onClick={(e) => {
                                     e.preventDefault()
                                     setRegisterUserForEvent(event.id)
