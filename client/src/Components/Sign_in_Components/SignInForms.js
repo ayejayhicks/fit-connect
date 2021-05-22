@@ -6,8 +6,7 @@ import { Formik, useField, Form as Form1 } from 'formik';
 import * as Yup from 'yup'
 import '../../index.css'
 import API from "../../utils/API";
-import { useUserContext } from '../../utils/GlobalState'
-import AuthService from '../../utils/AuthService';
+import { useUserContext } from '../../utils/GlobalState';
 
 const CustomTextInput = ({ label, ...props }) => {
     const [field, meta] = useField(props);

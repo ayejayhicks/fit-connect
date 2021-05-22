@@ -46,8 +46,9 @@ function Events() {
             try {
                 const { status } = await API.registerUserForEvent(eventId)
                 if (status === 200) {
-                    // TODO: Need to figure out what should happen after a user has successfully register for an event?????
+                    // TODO: Need to figure out what should happen after a user has successfully registered for an event?????
                     alert("You've successfully registered for this event! Woo hoo!");
+                    setIsLoadingEvents(true)
                 } else {
                     alert('Uh oh, something went wrong. Please try again.');
                 }
@@ -59,6 +60,31 @@ function Events() {
 
         registerUserRequest();
     }, [registerUserForEvent])
+
+    const ctaButton = (event) => {
+        if (event.isUserRegistered) {
+            return <Button
+                variant="flat"
+                type="button"
+                className="container-xl event-register-btn"
+                onClick={(e) => {
+                    e.preventDefault()
+                }}>
+                Registered!
+            </Button>
+        } else {
+            return <Button
+                variant="flat"
+                type="button"
+                className="container-xl event-register-btn"
+                onClick={(e) => {
+                    e.preventDefault()
+                    setRegisterUserForEvent(event.id)
+                }}>
+                Register
+            </Button>
+        }
+    }
 
     const eventCards = () => {
         return events.map(event => {
@@ -116,15 +142,7 @@ function Events() {
                     <Card.Body>
 
                         <Col>
-                            <Button
-                                variant="flat"
-                                className="container-xl"
-                                onClick={(e) => {
-                                    e.preventDefault()
-                                    setRegisterUserForEvent(event.id)
-                                }}>
-                                Register
-                            </Button>
+                            { ctaButton(event) }
                         </Col>
                         <Col>
 
