@@ -9,7 +9,7 @@ const eventSeed = [
   {
     eventName: "Roll Out",
     typeOfEvent: "Biking",
-    participants: "5",
+    participants: "6",
     descriptionOfEvent: "Lock yourself for 2 hours ",
     city: "Cumming",
     level: "Intermediate",
