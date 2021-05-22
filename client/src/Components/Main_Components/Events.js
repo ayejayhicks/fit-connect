@@ -61,6 +61,32 @@ function Events() {
         registerUserRequest();
     }, [registerUserForEvent])
 
+    const ctaButton = (event) => {
+        if (event.isUserRegistered) {
+            return <Button
+                variant="flat"
+                type="button"
+                className="container-xl event-register-btn"
+                onClick={(e) => {
+                    e.preventDefault()
+                    // setRegisterUserForEvent(event.id)
+                }}>
+                Registered!
+            </Button>
+        } else {
+            return <Button
+                variant="flat"
+                type="button"
+                className="container-xl event-register-btn"
+                onClick={(e) => {
+                    e.preventDefault()
+                    setRegisterUserForEvent(event.id)
+                }}>
+                Register
+            </Button>
+        }
+    }
+
     const eventCards = () => {
         return events.map(event => {
             console.log('event', event);
@@ -117,16 +143,7 @@ function Events() {
                     <Card.Body>
 
                         <Col>
-                            <Button
-                                variant="flat"
-                                type="button"
-                                className="container-xl event-register-btn"
-                                onClick={(e) => {
-                                    e.preventDefault()
-                                    setRegisterUserForEvent(event.id)
-                                }}>
-                                Register
-                            </Button>
+                            { ctaButton(event) }
                         </Col>
                         <Col>
 

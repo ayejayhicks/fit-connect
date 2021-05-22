@@ -3,11 +3,28 @@ const app = require('express');
 const router = app.Router();
 
 // GET: /api/events
-router.get("/", async (req, res) => {
+router.get("/", async ({ session: { user_email: email } }, res) => {
   try {
-    const events = await db.Event.find({})
-    res.json(events);
+    const user = await db.User.findOne({ email });
+    if (!user) {
+      res.status(400).send();
+      return;
+    }
+
+    // Check each Event and see if `user.id` is contained within `event.users` list.
+    // If it is: add the field `isRegistered: true` to the Event
+    // If it isn't: add the field `isRegistered: false` to the Event
+    const events = await db.Event.aggregate([
+      {
+        $addFields: {
+          isUserRegistered: { $in: [ user._id, "$users" ]}
+        }
+      }
+    ])
+
+    res.send(events);
   } catch (error) {
+    console.log('error', error);
     res.json(error);
   }
 });
