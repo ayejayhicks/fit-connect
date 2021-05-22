@@ -10,7 +10,6 @@ import "react-datepicker/dist/react-datepicker.css";
 
 
 const UserFunction = (values) => {
-    alert(JSON.stringify(values, null,2) );
     API.saveEvent(values)
         .then(res => {
             window.location.href = '/main';
