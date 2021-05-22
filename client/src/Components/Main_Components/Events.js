@@ -69,7 +69,6 @@ function Events() {
                 className="container-xl event-register-btn"
                 onClick={(e) => {
                     e.preventDefault()
-                    // setRegisterUserForEvent(event.id)
                 }}>
                 Registered!
             </Button>
