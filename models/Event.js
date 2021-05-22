@@ -3,13 +3,18 @@ const Schema = mongoose.Schema;
 
 const opts = { toJSON: { virtuals: true } };
 const EventSchema = new Schema({
-  eventType: {
+  // TODO: Update this to have the necessary fields that make of an "Event"
+  eventName: {
     type: String,
     trim: true,
-    enum: ['Run', '5k', 'Hiking', 'Hiit', 'Yoga', 'Biking', 'Strength Training'],
+  }, 
+  typeOfEvent: {
+    type: String,
+    trim: true,
+    enum: ['Yoga', 'Hiking', 'Running', 'MountainBiking', 'Biking', 'WeightLifting', 'GymClass', 'Walk'],
     required: true
   },
-  city: {
+  descriptionOfEvent: {
     type: String,
     trim: true,
     required: true
@@ -18,18 +23,32 @@ const EventSchema = new Schema({
     type: Date,
     required: true
   },
-  fitnessLevel: {
+  level: {
     type: String,
     enum: ['Beginner', 'Intermediate', 'Advanced'],
     required: true
   },
-  enrollmentCapacity: {
-    type: Number,
-    min: 1,
-    max: 10,
+  time: {
+    type: String,
     required: true
   },
-  location: {
+  duration: {
+    type: String,
+    trim: true,
+    required: true
+  },
+  participants: {
+    type: Number,
+    min: 1,
+    max: 20,
+    required: true
+  },
+  eventLocation: {
+    type: String,
+    trim: true,
+    required: true
+  },
+  city: {
     type:String,
     trim: true
   },

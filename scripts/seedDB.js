@@ -7,45 +7,42 @@ mongoose.connect(
 
 const eventSeed = [
   {
-    eventType: "Biking",
-    enrollmentCapacity: "5",
+    eventName: "Roll Out",
+    typeOfEvent: "Biking",
+    participants: "5",
+    descriptionOfEvent: "Lock yourself for 2 hours ",
     city: "Cumming",
-    fitnessLevel: "Beginner",
-    date: "2021-07-19T13:04:00",
-    location: "122 red lane, Cumming, GA"
+    level: "Intermediate",
+    date: "2021-06-20T04:00:00.000+00:00",
+    time: "6AM",
+    duration: "2h",
+    eventLocation: "122 red lane, Cumming, GA"
   },
   {
-    eventType: "Hiking",
-    enrollmentCapacity: "10",
+    eventName: "Lets DO IT",
+    typeOfEvent: "Hiking",
+    participants: "10",
+    descriptionOfEvent: "All day long ",
     city: "Atlanta",
-    fitnessLevel: "Intermediate",
-    date: "2021-06-19T23:04:00",
-    location: "321 blue lane, Atlanta, GA"
+    level: "Advanced",
+    date: "2021-06-10T04:00:00.000+00:00",
+    time: "10AM",
+    duration: "6h",
+    eventLocation: "321 blue lane, Atlanta, GA"
   },
   {
-    eventType: "Yoga",
-    enrollmentCapacity: "9",
+    eventName: "Strength training",
+    typeOfEvent: "Yoga",
+    participants: "8",
+    descriptionOfEvent: "Lock yourself for 2 hours ",
     city: "Sandy Spring",
-    fitnessLevel: "Advanced",
-    date: "2021-06-01T13:04:00",
-    location: "1212 robin lane, Sandy Spring, CA"
+    level: "Beginner",
+    date: "2021-07-25T04:00:00.000+00:00",
+    time: "7AM",
+    duration: "2h",
+    eventLocation: "1212 robin lane, Sandy Spring, CA"
   },
-  {
-    eventType: "Strength training",
-    enrollmentCapacity: "6",
-    city: "New York",
-    fitnessLevel: "Beginner",
-    date: "2021-06-20T03:04:00",
-    location: "4124 ivy lane, New York, GA"
-  },
-  {
-    eventType: "Run",
-    enrollmentCapacity: "5",
-    city: "Chicago",
-    fitnessLevel: "Beginner",
-    date: "2021-06-22T13:20:00",
-    location: "1234 bluejay lane, Chicago, GA"
-  },
+  
 ];
 
 db.Event.remove({})

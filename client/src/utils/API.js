@@ -22,6 +22,20 @@ export default {
       fitnessLevel: values.fitnessLevel
     });
   },
+  saveEvent: function (values) {
+    return axios.post('/api/events', {
+      eventName: values.eventName ,
+      typeOfEvent: values.typeOfEvent,
+      descriptionOfEvent: values.descriptionOfEvent,
+      date: values.date,
+      level: values.level,
+      time: values.time,
+      duration: values.duration,
+      participants: values.participants,
+      eventLocation: values.eventLocation,
+      city: values.city,
+    });
+  },
   signin: function ({ email, password }) {
     return axios.post('/api/login', {
       email,

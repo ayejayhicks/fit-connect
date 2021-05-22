@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Form, Button, Row, Col } from 'react-bootstrap';
 import { Styles } from '../Sign_up_Components/EditSignUpForms'
-import { Formik, useField, Form as Form1 } from 'formik';
+import { Formik, useField, useFormikContext, Form as Form1 } from 'formik';
 import * as Yup from 'yup'
 import '../../index.css'
 import API from "../../utils/API";
@@ -10,10 +10,9 @@ import "react-datepicker/dist/react-datepicker.css";
 
 
 const UserFunction = (values) => {
-
-    API.saveUser(values)
+    API.saveEvent(values)
         .then(res => {
-            window.location.href = '/signin';
+            window.location.href = '/main';
         }
         )
         .catch(err => console.log(err));
@@ -68,10 +67,23 @@ const CustomSelect = ({ label, ...props }) => {
     )
 }
 
+export const DatePickerField = ({ ...props }) => {
+    const { setFieldValue } = useFormikContext();
+    const [field] = useField(props);
+    return (
+      <DatePicker
+        {...field}
+        {...props}
+        selected={(field.value && new Date(field.value)) || null}
+        onChange={val => {
+          setFieldValue(field.name, val);
+        }}
+      />
+    );
+  };
+
 function CreateEventForm(date) {
     const [startDate, setStartDate] = useState(new Date());
- 
-    new Date(date).toLocaleDateString()
     return (
         <Styles>
             <Formik
@@ -85,14 +97,13 @@ function CreateEventForm(date) {
                     level: '',
                     participants: '',
                     eventLocation: '',
+                    city:''
 
                 }}
                 validationSchema={Yup.object({
                     eventName: Yup.string()
                         .min(3, 'Must be at least 3 characters')
                         .max(15, 'must be 15 characters or less')
-                        .required('Required'),
-                    eventCity: Yup.string()
                         .required('Required'),
                     typeOfEvent: Yup.string()
                         .oneOf(['Yoga', 'Hiking', 'Walk', 'Running', 'MountainBiking', 'Biking', 'WeightLifting', 'GymClass'])
@@ -113,8 +124,8 @@ function CreateEventForm(date) {
                         .required('Required'),
                     eventLocation: Yup.string()
                         .required('Required'),
-                    
-                    
+
+
                 })}
                 onSubmit={(values, { setSubmitting, resetForm }) => {
                     setTimeout(() => {
@@ -153,7 +164,7 @@ function CreateEventForm(date) {
                         </Form.Row>
 
                         <Form.Row>
-                        <DatePicker label="Date" selected={startDate} onChange={date => setStartDate(date)} />
+                            <DatePickerField name="date" />
                         </Form.Row>
 
                         <Row>
@@ -196,6 +207,7 @@ function CreateEventForm(date) {
                         </Row>
 
                         <Row>
+                        <CustomTextInput label="City" name="city" type="text" placeholder="City" />
                             <CustomSelect label="Max number of participants" name="participants">
                                 <option value="">Please Select</option>
                                 <option value="5">5</option>
@@ -220,7 +232,7 @@ function CreateEventForm(date) {
                     </Form1>
                 )}
             </Formik>
-      </Styles>
+        </Styles>
     )
 }
 

@@ -6,7 +6,6 @@ import  CreateEventForm from '../Components/Create_Event_Components/CreateEventF
 import { Layout } from '../Components/Home_Components/Layout'
 
 
-
 const CreateEvent = () => {
     return (
         <React.Fragment>

@@ -18,6 +18,7 @@ router.post("/", async (req, res) => {
     const event = await db.Event.create(req.body);
     res.json(event);
   } catch (error) {
+    console.log(error);
     res.json(error);
   }
 });

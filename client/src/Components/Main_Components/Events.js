@@ -68,18 +68,18 @@ function Events() {
                 <Card style={{ width: '20rem' }} className="bg-dark text-white mb-5 mt-5 ml-5 mr-5">
                     <Card.Img variant="top" src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0oTz2p2B3qG8hkzcfoWijkNQn38UxGZZZDw&usqp=CAU"} alt="Card Image" />
                     <Card.ImgOverlay>
-                        <h2 className="CardTitle">{event.eventType}</h2>
+                        <h2 className="CardTitle">{event.eventName}</h2>
                     </Card.ImgOverlay>
                     <Card.Body>
 
                         <Row>
                             <Col>
                                 <Card.Title>Event</Card.Title>
-                                <Card.Text className="eventName"> {event.eventType} </Card.Text>
+                                <Card.Text className="eventName"> {event.typeOfEvent} </Card.Text>
                             </Col>
                             <Col>
                                 <Card.Title>Enrolled</Card.Title>
-                                <Card.Text className="participants"> {event.enrollmentCapacity}/10 </Card.Text>
+                                <Card.Text className="participants"> {event.users.length}/{event.participants} </Card.Text>
                             </Col>
                         </Row>
                     </Card.Body>
@@ -92,7 +92,7 @@ function Events() {
                             </Col>
                             <Col>
                                 <Card.Title>Level</Card.Title>
-                                <Card.Text className="level">  {event.fitnessLevel} </Card.Text>
+                                <Card.Text className="level">  {event.level} </Card.Text>
                             </Col>
                         </Row>
                     </Card.Body>
@@ -104,14 +104,14 @@ function Events() {
                             </Col>
                             <Col>
                                 <Card.Title>Time</Card.Title>
-                                <Card.Text className="Date"> {moment(eventdate).format('hh:mm A')} </Card.Text>
+                                <Card.Text className="Date"> {event.time}</Card.Text>
                             </Col>
                         </Row>
                     </Card.Body>
 
                     <Card.Body>
                         <Card.Title>Event Location</Card.Title>
-                        <Card.Text> {event.location} </Card.Text>
+                        <Card.Text> {event.eventLocation} </Card.Text>
                     </Card.Body>
                     <Card.Body>
 
