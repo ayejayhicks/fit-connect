@@ -24,8 +24,7 @@ export const Cards = () => (
                 <Card.Body>
                     <Card.Title><h5>FIND YOUR GROUP</h5></Card.Title>
                     <Card.Text className="text">
-                        This card has supporting text below as a natural lead-in to additional
-        content.{' '}
+                        Look for groups based on the things that you love to do!{' '}
                     </Card.Text>
                 </Card.Body>
             </Card>

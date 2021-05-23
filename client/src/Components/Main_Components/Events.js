@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import API from "../../utils/API";
-import { Card, Col, Row, Button } from 'react-bootstrap';
+import { Card, Col, Row, Button, Accordion } from 'react-bootstrap';
+import './Events.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
 const moment = require('moment');
 
 function Events() {
@@ -90,8 +92,8 @@ function Events() {
         return events.map(event => {
             console.log('event', event);
             const eventdate = new Date(event.date);
-            return <Col md={4}>
-                <Card style={{ width: '20rem' }} className="bg-dark text-white mb-5 mt-5 ml-5 mr-5">
+            return <Col lg={4}>
+                <Card id="mainCardId" style={{ width: '20rem' }} className="bg-dark text-white mb-5 mt-5 ml-5 mr-5">
                     <Card.Img variant="top" src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0oTz2p2B3qG8hkzcfoWijkNQn38UxGZZZDw&usqp=CAU"} alt="Card Image" />
                     <Card.ImgOverlay>
                         <h2 className="CardTitle">{event.eventName}</h2>
@@ -139,8 +141,25 @@ function Events() {
                         <Card.Title>Event Location</Card.Title>
                         <Card.Text> {event.eventLocation} </Card.Text>
                     </Card.Body>
-                    <Card.Body>
 
+                    <Card.Body>
+                        <Accordion>
+                            <Card className="bg-dark text-white">
+                                <Card.Header>
+                                    <Accordion.Toggle as={Button} variant="secondary" eventKey="0" block> 
+                                        <span className="arrowSize">Event Description &#11167;</span>
+                                  </Accordion.Toggle>
+                                </Card.Header>
+                                <Accordion.Collapse eventKey="0">
+                                    <Card.Body>{event.descriptionOfEvent}</Card.Body>
+                                </Accordion.Collapse>
+                            </Card>
+                            </Accordion>
+                    </Card.Body>
+
+
+
+                    <Card.Body>
                         <Col>
                             { ctaButton(event) }
                         </Col>
@@ -155,7 +174,7 @@ function Events() {
     }
 
     return (
-        <Row>{eventCards()}</Row>
+        <Row className="">{eventCards()}</Row>
     );
 }
 

@@ -1,7 +1,7 @@
 .SignInFooterMargin {
     font-family: roboto;
     position: absolute;
-    bottom: auto;
+    bottom: 0;
     margin-bottom: -60px;
     padding: 2vh;
     background-color: #F3F3F3;

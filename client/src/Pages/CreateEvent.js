@@ -1,7 +1,7 @@
 import React from 'react';
 import NavigationBar from '../Components/Home_Components/NavigationBar';
-import { SignInFooterSection } from '../Components/Sign_in_Components/SignInFooter';
-import { SignInFooterContent } from '../Components/Sign_in_Components/SignInFooterContent';
+import { FooterSection } from '../Components/Home_Components/Footer';
+import { FooterContent } from '../Components/Home_Components/FooterContent';
 import  CreateEventForm from '../Components/Create_Event_Components/CreateEventForm'
 import { Layout } from '../Components/Home_Components/Layout'
 
@@ -20,12 +20,12 @@ const CreateEvent = () => {
             </Layout>
 
             {/* Footer */}
-            <SignInFooterSection>
+            <FooterSection>
                 <Layout>
-                    <SignInFooterContent>
-                    </SignInFooterContent>
+                    <FooterContent>
+                    </FooterContent>
                 </Layout>
-            </SignInFooterSection>
+            </FooterSection>
         </React.Fragment>
     )
 }

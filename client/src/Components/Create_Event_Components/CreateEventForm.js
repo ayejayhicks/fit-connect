@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Form, Button, Row, Col } from 'react-bootstrap';
 import { Styles } from '../Sign_up_Components/EditSignUpForms'
-import { Formik, useField, useFormikContext, Form as Form1 } from 'formik';
+import { Formik, useField, useFormikContext, Form as Form1, yupToFormErrors } from 'formik';
 import * as Yup from 'yup'
 import '../../index.css'
 import API from "../../utils/API";
@@ -33,23 +33,6 @@ const CustomTextInput = ({ label, ...props }) => {
     )
 }
 
-// const CustomCheckBox = ({ children, ...props }) => {
-//     const [field, meta] = useField(props, 'checkbox');
-
-//     return (
-//         <>
-//             <Form.Group as={Row} >
-//                 <Col xl={{ span: 10, offset: 2 }}>
-//                     <Form.Check {...field} {...props} label={children} name={props.name} />
-//                     {meta.touched && meta.error ? (
-//                         <div className="error">{meta.error}</div>
-//                     ) : null}
-//                 </Col>
-//             </Form.Group>
-
-//         </>
-//     )
-// }
 
 const CustomSelect = ({ label, ...props }) => {
     const [field, meta] = useField(props);
@@ -103,7 +86,7 @@ function CreateEventForm(date) {
                 validationSchema={Yup.object({
                     eventName: Yup.string()
                         .min(3, 'Must be at least 3 characters')
-                        .max(15, 'must be 15 characters or less')
+                        .max(20, 'must be 20 characters or less')
                         .required('Required'),
                     typeOfEvent: Yup.string()
                         .oneOf(['Yoga', 'Hiking', 'Walk', 'Running', 'MountainBiking', 'Biking', 'WeightLifting', 'GymClass'])
@@ -124,6 +107,8 @@ function CreateEventForm(date) {
                         .required('Required'),
                     eventLocation: Yup.string()
                         .required('Required'),
+                    date: Yup.date()
+                        .required('Please enter a date in the format of MM/DD/YYYY')
 
 
                 })}
@@ -164,7 +149,8 @@ function CreateEventForm(date) {
                         </Form.Row>
 
                         <Form.Row>
-                            <DatePickerField name="date" />
+                            <CustomTextInput label="Event Date" name="date" placeholder="mm/dd/yyyy" />
+                            {/* <DatePickerField name="date" /> */}
                         </Form.Row>
 
                         <Row>

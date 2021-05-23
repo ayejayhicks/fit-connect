@@ -1,12 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { Form, Button, Col, Container, Row } from 'react-bootstrap';
 import { Styles } from './EditForms'
-// import { } from 'react-bootstrap';
 import { Formik, useField, Form as Form1 } from 'formik';
 import * as Yup from 'yup'
 import '../../index.css'
 import API from "../../utils/API";
+<<<<<<< HEAD
 import { useUserContext } from '../../utils/GlobalState';
+=======
+import { useUserContext } from '../../utils/GlobalState'
+import AuthService from '../../utils/AuthService';
+import './SignInForms.css'
+>>>>>>> fixing-css
 
 const CustomTextInput = ({ label, ...props }) => {
     const [field, meta] = useField(props);
@@ -21,22 +26,6 @@ const CustomTextInput = ({ label, ...props }) => {
         </>
     )
 }
-
-// const CustomCheckBox = ({ children, ...props }) => {
-//     const [field, meta] = useField(props, 'checkbox');
-
-//     return (
-//         <>
-//             <label className="checkbox">
-//                 <input type="checkbox" {...field} {...props} />
-//                 {children}
-//             </label>
-//             {meta.touched && meta.error ? (
-//                 <div className="error">{meta.error}</div>
-//             ) : null}
-//         </>
-//     )
-// }
 
 
 function SignInForms() {
@@ -82,7 +71,7 @@ function SignInForms() {
     }
 
     return (
-        <Container>
+        <Container className="MarginContainerSignIn">
             <Row className="signInContainerForm">
                 <Col md={4} xs={2} />
                 <Col md={4} xs={8}>
@@ -104,6 +93,9 @@ function SignInForms() {
 
                             {props => (
                                 <Form1>
+                                    <Form.Row>
+                                        <h1 className="textAlignCenter"> Sign In</h1>
+                                    </Form.Row>
                                     <Form.Row>
                                         <CustomTextInput label="Login" name="email" type="email" placeholder=" batman@gmail.com" />
                                     </Form.Row>
