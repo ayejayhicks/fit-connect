@@ -8,6 +8,7 @@ function Events() {
     // This is set to true by default to indicate that events load on page load
     const [isLoadingEvents, setIsLoadingEvents] = useState(true);
     const [registerUserForEvent, setRegisterUserForEvent] = useState(null)
+    const [unregisterUserForEvent, setUnregisterUserForEvent] = useState(null)
 
     useEffect(() => {
         if (!isLoadingEvents) {
@@ -35,7 +36,7 @@ function Events() {
 
     useEffect(() => {
         const eventId = registerUserForEvent;
-        console.log('eventId', eventId);
+        console.log('register eventId', eventId);
         if (!eventId) {
             return;
         }
@@ -46,7 +47,6 @@ function Events() {
             try {
                 const { status } = await API.registerUserForEvent(eventId)
                 if (status === 200) {
-                    // TODO: Need to figure out what should happen after a user has successfully registered for an event?????
                     alert("You've successfully registered for this event! Woo hoo!");
                     setIsLoadingEvents(true)
                 } else {
@@ -61,6 +61,33 @@ function Events() {
         registerUserRequest();
     }, [registerUserForEvent])
 
+    useEffect(() => {
+        const eventId = unregisterUserForEvent;
+        console.log('unregister eventId', eventId);
+        if (!eventId) {
+            return;
+        }
+
+        setUnregisterUserForEvent(null)
+
+        const unregisterUserRequest = async () => {
+            try {
+                const { status } = await API.unregisterUserForEvent(eventId)
+                if (status === 200) {
+                    alert("You've successfully unregistered from this event.");
+                    setIsLoadingEvents(true)
+                } else {
+                    alert('Uh oh, something went wrong. Please try again.');
+                }
+            } catch (error) {
+                console.log('error', error);
+                alert('Uh oh, something went wrong. Please try again.');
+            }
+        }
+
+        unregisterUserRequest();
+    }, [unregisterUserForEvent])
+
     const ctaButton = (event) => {
         if (event.isUserRegistered) {
             return <Button
@@ -69,6 +96,7 @@ function Events() {
                 className="container-xl event-register-btn"
                 onClick={(e) => {
                     e.preventDefault()
+                    setUnregisterUserForEvent(event._id)
                 }}>
                 Registered!
             </Button>
@@ -79,7 +107,7 @@ function Events() {
                 className="container-xl event-register-btn"
                 onClick={(e) => {
                     e.preventDefault()
-                    setRegisterUserForEvent(event.id)
+                    setRegisterUserForEvent(event._id)
                 }}>
                 Register
             </Button>
@@ -88,7 +116,6 @@ function Events() {
 
     const eventCards = () => {
         return events.map(event => {
-            console.log('event', event);
             const eventdate = new Date(event.date);
             return <Col md={4}>
                 <Card style={{ width: '20rem' }} className="bg-dark text-white mb-5 mt-5 ml-5 mr-5">
