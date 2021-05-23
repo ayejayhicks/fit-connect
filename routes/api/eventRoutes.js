@@ -17,12 +17,23 @@ router.get("/", async ({ session: { user_email: email } }, res) => {
     const events = await db.Event.aggregate([
       {
         $addFields: {
-          isUserRegistered: { $in: [ user._id, "$users" ]}
+          users: {
+            $cond: {
+              if: { $isArray: "$users" },
+              then: "$users",
+              else: []
+            }
+          }
+        }
+      },
+      {
+        $addFields: {
+          isUserRegistered: { $in: [ user._id, "$users" ] }
         }
       }
     ])
 
-    res.send(events);
+    res.json(events);
   } catch (error) {
     console.log('error', error);
     res.json(error);
@@ -57,6 +68,33 @@ router.post("/:id/register", async ({ params: { id }, session: { user_email: ema
     }
 
     user.events.push(event.id);
+    await user.save();
+
+    console.log('event', event);
+    res.json(event);
+  } catch(err) {
+      console.log('err', err);
+      res.json(err);
+  };
+});
+
+// POST to register user for event
+// POST: /api/events/:id/unregister
+router.post("/:id/unregister", async ({ params: { id }, session: { user_email: email } }, res) => {
+  try {
+    const user = await db.User.findOne({ email });
+    if (!user) {
+      res.status(400).send();
+      return;
+    }
+
+    const event = await db.Event.findOneAndUpdate({ _id: id }, { $pull: { users: user.id } }, { new: true })
+    if (!event) {
+      res.status(400).send();
+      return;
+    }
+
+    user.events = user.events.filter(e => e._id !== event._id);
     await user.save();
 
     console.log('event', event);

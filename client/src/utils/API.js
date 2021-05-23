@@ -51,5 +51,8 @@ export default {
   },
   registerUserForEvent: function (eventId) {
     return axios.post(`/api/events/${eventId}/register`)
+  },
+  unregisterUserForEvent: function (eventId) {
+    return axios.post(`/api/events/${eventId}/unregister`)
   }
 };
