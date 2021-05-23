@@ -1,0 +1,22 @@
+.createEventButton {
+    border-radius: 50%;
+    width: 5.5rem;
+    height: 5.5rem;
+    background-color: rgb(251, 122, 0)!important;
+}
+
+.createEventButton:hover {
+    border-radius: 50%;
+    width: 5.6rem;
+    height: 5.6rem;
+    background-color: rgb(255, 72, 0)!important;
+}
+
+
+.plusButton {
+    font-size:3.2rem;
+}
+
+.plusButton:hover {
+    font-size:3.2rem;
+}

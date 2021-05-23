@@ -10,14 +10,10 @@ export const SignInFooterContent = (props) => (
             <Col xs={4} className="footerColumn1">
                 <ul className="list-unstyled">
                     <h6>About Us</h6>
-                    <li className="bodyTextFooter"> Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                    accusantium doloremq laudantium, totam rem aperiam, eaque ipsa
-                    quae ab illo inventore veritatis et quasi architecto</li>
+                    <li className="bodyTextFooter"> Fit Connect was created by a group of developers who believe joining a team or having partners to push yourself harder is more efficient than do it by yourself.</li>
                     <br></br>
                     <h6>Mission</h6>
-                    <li className="bodyTextFooter"> Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                    accusantium doloremq laudantium, totam rem aperiam, eaque ipsa
-                    quae ab illo inventore veritatis et quasi architecto</li>
+                    <li className="bodyTextFooter"> We want to provide better ways for people to connect to each other to produce results!</li>
 
                 </ul>
             </Col>

@@ -13,3 +13,11 @@ h5, .text {
     justify-content: center;
 }
 
+#sizeCardImg:hover {
+    height: 130px;
+    width: 130px;
+    justify-content: center;
+    filter: invert(39%) sepia(100%) saturate(950%) hue-rotate(357deg) brightness(103%) contrast(92%);
+  
+}
+

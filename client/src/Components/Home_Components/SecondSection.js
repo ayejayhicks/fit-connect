@@ -18,9 +18,8 @@ export const SecondSection = () => (
                             <Card.Body>
                                 <Card.Title><h2>Workout from the safety of your home!</h2></Card.Title>
                                 <Card.Text className="text">
-                                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                                    accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-                                    quae ab illo inventore veritatis et quasi architecto beatae vitae dicta.
+                                    We know that Covid hit everyone differently, and we understand if you are not ready to come outside yet, but worry not, you can create or join online 
+                                    groups where people will connect from their own places and everyone will get the workout done together!
                         </Card.Text>
                                 <Button variant="flat" size="" href="/signup"> Join Us </Button>
                             </Card.Body>

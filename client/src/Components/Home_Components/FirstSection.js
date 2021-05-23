@@ -11,12 +11,10 @@ export const FirstSection = () => (
                     <CardDeck className="text-center cardAlign">
                         <Card className="mb-5 border-0 align-items-center">
                             <Card.Body>
-                                <Card.Title><h2>Find the right of group of
-                            people, with the right workout!</h2></Card.Title>
+                                <Card.Title><h2>Trying to achieve new goals?</h2></Card.Title>
                                 <Card.Text className="text">
-                                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                                    accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-                                    quae ab illo inventore veritatis et quasi architecto beatae vitae dicta.
+                                    FIT CONNECT provide a better way for fitness enthusiasts to connect to each other. Here you can register or create your own event and find people to do the workouts with you. 
+    
                             </Card.Text>
                                 <Button variant="flat" size="" href="/signup"> Join Us </Button>
                             </Card.Body>
