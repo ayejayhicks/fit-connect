@@ -5,13 +5,8 @@ import { Formik, useField, Form as Form1 } from 'formik';
 import * as Yup from 'yup'
 import '../../index.css'
 import API from "../../utils/API";
-<<<<<<< HEAD
 import { useUserContext } from '../../utils/GlobalState';
-=======
-import { useUserContext } from '../../utils/GlobalState'
-import AuthService from '../../utils/AuthService';
 import './SignInForms.css'
->>>>>>> fixing-css
 
 const CustomTextInput = ({ label, ...props }) => {
     const [field, meta] = useField(props);
