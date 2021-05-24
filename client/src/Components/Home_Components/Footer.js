@@ -8,4 +8,3 @@ export const FooterSection = (props) => (
     {props.children}
   </Row>
 );
-
