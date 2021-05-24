@@ -14,9 +14,9 @@ const eventSeed = [
     city: "Cumming",
     level: "Intermediate",
     date: "2021-06-20T04:00:00.000+00:00",
-    time: "6AM",
+    time: "6:00 AM",
     duration: "2h",
-    eventLocation: "122 red lane, Cumming, GA"
+    eventLocation: "122 Red Lane, Cumming, GA"
   },
   {
     eventName: "Lets DO IT",
@@ -26,9 +26,9 @@ const eventSeed = [
     city: "Atlanta",
     level: "Advanced",
     date: "2021-06-10T04:00:00.000+00:00",
-    time: "10AM",
+    time: "10:00 AM",
     duration: "6h",
-    eventLocation: "321 blue lane, Atlanta, GA"
+    eventLocation: "321 Blue Lane, Atlanta, GA"
   },
   {
     eventName: "Strength training",
@@ -38,9 +38,9 @@ const eventSeed = [
     city: "Sandy Spring",
     level: "Beginner",
     date: "2021-07-25T04:00:00.000+00:00",
-    time: "7AM",
+    time: "7:00 AM",
     duration: "2h",
-    eventLocation: "1212 robin lane, Sandy Spring, CA"
+    eventLocation: "1212 Robin Lane, Sandy Spring, CA"
   },
 
 ];
