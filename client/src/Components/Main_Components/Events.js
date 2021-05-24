@@ -93,7 +93,7 @@ function Events() {
     const ctaButton = (event) => {
         if (event.isUserRegistered) {
             return <Button
-                variant="flat"
+                variant="success"
                 type="button"
                 className="container-xl event-register-btn"
                 onClick={(e) => {
