@@ -7,7 +7,7 @@ router.post('/', (req, res) => {
             res.status(204).end();
         });
     } else {
-        res.status(404).end();
+        res.status(204).end();
     }
 });
 
