@@ -154,22 +154,22 @@ function SignUpForms() {
 
                     <Form1>
                         <h1>SIGN UP</h1>
-                        <Form.Row>
+                        <Form.Row className="mt-3">
                             <CustomTextInput label="First Name" name="firstName" type="text" placeholder=" Bruce" />
                             <CustomTextInput label="Last Name" name="lastName" type="text" placeholder=" Wayne" />
                         </Form.Row>
 
-                        <Form.Row>
+                        <Form.Row className="mt-3">
                             <CustomTextInput label="Phone Number" name="phoneNumber" type="boolean" placeholder=" (123) 345-6789" />
                             <CustomTextInput label="Email" name="email" type="email" placeholder=" batman@gmail.com" />
                         </Form.Row>
 
-                        <Form.Row>
-                            <CustomTextInput label="Password" name="password" type="password" placeholder=" ******" />
-                            <CustomTextInput label="Confirm Password" name="confirmPassword" type="password" placeholder=" ******" />
+                        <Form.Row className="mt-3">
+                            <CustomTextInput label="Password" name="password" autoComplete="new-password" type="password" placeholder="******" />
+                            <CustomTextInput label="Confirm Password" name="confirmPassword" type="password" placeholder="******" />
                         </Form.Row>
 
-                        <Form.Row>
+                        <Form.Row className="mt-3">
                             <CustomTextInput label="Age" name="age" type="boolean" placeholder="0" />
                             <CustomSelect label="Gender" name="gender">
                                 <option value="">Please Select</option>
@@ -179,17 +179,17 @@ function SignUpForms() {
                             </CustomSelect>
                         </Form.Row>
 
-                        <Form.Row>
+                        <Form.Row className="mt-3">
                             <CustomTextInput label="City" name="city" type="text" placeholder=" Select City" />
                             <CustomTextInput label="Zip Code" name="zipCode" type="boolean" placeholder=" 30033" />
                         </Form.Row>
 
-                        <Form.Row>
+                        <Form.Row className="mt-3">
                             <CustomTextInput label="Emergency Contact" name="emergencyContact" type="text" placeholder=" Robin" />
                             <CustomTextInput label="Phone Number for Emergency " name="phoneNumberOfEmergency" type="text" placeholder=" Wayne" />
                         </Form.Row>
 
-                        <Row>
+                        <Row className="mt-3">
                             <CustomSelect label="Fitness Level" name="fitnessLevel">
                                 <option value="">Please Select</option>
                                 <option value="Beginner">Beginner</option>
@@ -198,15 +198,15 @@ function SignUpForms() {
                             </CustomSelect>
                         </Row>
 
-                        <CustomCheckBox name="acceptedTerms">
+                        <CustomCheckBox name="acceptedTerms" className="mt-3">
                             I accept the terms and conditions
                         </CustomCheckBox>
 
-                        <Form.Row>
+                        <Form.Row className="mt-3">
                             <Form.Group as={Col}>
                                 <Button variant="signUpCancel" href="/" type="submit">{props.isSubmitting ? 'Loading...' : 'Back'}</Button>
                             </Form.Group>
-                            <Form.Group as={Col}>
+                            <Form.Group >
                                 <Button variant="flat" type="submit">{props.isSubmitting ? 'Loading...' : 'Register'}</Button>
                             </Form.Group>
                         </Form.Row>

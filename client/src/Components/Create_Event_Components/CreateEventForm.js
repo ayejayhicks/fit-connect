@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Form, Button, Row, Col } from 'react-bootstrap';
 import { Styles } from '../Sign_up_Components/EditSignUpForms'
-import { Formik, useField, useFormikContext, Form as Form1, yupToFormErrors } from 'formik';
+import { Formik, useField, useFormikContext, Form as Form1 } from 'formik';
 import * as Yup from 'yup'
 import '../../index.css'
 import API from "../../utils/API";
@@ -66,7 +66,7 @@ export const DatePickerField = ({ ...props }) => {
   };
 
 function CreateEventForm(date) {
-    const [startDate, setStartDate] = useState(new Date());
+    
     return (
         <Styles>
             <Formik
@@ -145,7 +145,7 @@ function CreateEventForm(date) {
                         </Form.Row>
 
                         <Form.Row>
-                            <CustomTextInput label="Description of the event" name="descriptionOfEvent" descriptionOfEvent="text" placeholder="Describe your event" />
+                            <CustomTextInput label="Description of the event" name="descriptionOfEvent" descriptionOfEvent="textarea" placeholder="Describe your event" as="textarea" rows={3} />
                         </Form.Row>
 
                         <Form.Row>
