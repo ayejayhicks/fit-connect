@@ -8,10 +8,6 @@ vertical-align: middle;
 text-align: center;
 }
 
-#mainCardId {
-   
-}
-
 @media (max-width: 992px){
     #mainCardId {
     width: auto!important

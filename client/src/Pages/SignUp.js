@@ -4,8 +4,8 @@ import { SignUpLayout } from '../Components/Sign_up_Components/SignUpLayout';
 import { SignUpContainer } from '../Components/Sign_up_Components/SignUpContainer';
 import { SignUpImg } from '../Components/Sign_up_Components/SignUpImg';
 import SignUpForms from '../Components/Sign_up_Components/SignUpForms';
-import { SignInFooterSection } from '../Components/Sign_in_Components/SignInFooter';
-import { SignInFooterContent } from '../Components/Sign_in_Components/SignInFooterContent';
+import { FooterSection } from '../Components/Home_Components/Footer';
+import { FooterContent } from '../Components/Home_Components/FooterContent';
 //
 const SignUp = () => {
     return (
@@ -25,12 +25,12 @@ const SignUp = () => {
             </SignUpLayout>
 
             {/* Footer */}
-            <SignInFooterSection>
+            <FooterSection>
                 <SignUpContainer>
-                    <SignInFooterContent>
-                    </SignInFooterContent>
+                    <FooterContent>
+                    </FooterContent>
                 </SignUpContainer>
-            </SignInFooterSection>
+            </FooterSection>
         </React.Fragment>
     )
 }

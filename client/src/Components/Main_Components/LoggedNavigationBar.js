@@ -2,7 +2,6 @@ import React from 'react'
 import { Nav, Navbar, Button } from 'react-bootstrap'
 import "./LoggedNavigationBar.css";
 import navBarImage from "../../Assets/fitness-navbar.svg";
-import { scroller } from 'react-scroll';
 
 export const LoggedNavigationBar = () => (
     <>
