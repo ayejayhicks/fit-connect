@@ -11,24 +11,20 @@ import { FooterContent } from '../Components/Home_Components/FooterContent';
 export const Home = () => {
     return (
         <React.Fragment>
+          <Layout>
+            <NavigationBar />
+          </Layout>
+          <HeroCarousel />
+          <Layout>
+            <Cards />
+          </Layout>
+          <FirstSection />
+          <SecondSection />
+          <FooterSection>
             <Layout>
-                <NavigationBar />
+              <FooterContent />
             </Layout>
-            <HeroCarousel />
-            <Layout>
-                <Cards>
-                </Cards>
-            </Layout>
-            <FirstSection>
-            </FirstSection>
-            <SecondSection>
-            </SecondSection>
-            <FooterSection>
-                <Layout>
-                    <FooterContent>
-                    </FooterContent>
-                </Layout>
-            </FooterSection>
+          </FooterSection>
         </React.Fragment>
     );
 }

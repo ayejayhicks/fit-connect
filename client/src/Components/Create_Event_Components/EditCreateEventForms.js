@@ -1,30 +1,29 @@
 import styled from 'styled-components';
 
 export const Styles = styled.div`
-h1 {
+  h1 {
     margin-top: 5vh;
     margin-bottom: 3vh;
     color: blue;
     font-family: roboto;
-}
+  }
 
-// form {
-//     display: flex;
-//     flex-direction: column;
-//     margin 100px auto;
+  // form {
+  //   display: flex;
+  //   flex-direction: column;
+  //   margin 100px auto;
 
-label {
+  label {
     font-weight: 500;
-    }
+  }
 
-input, select {
+  input, select {
     font-size: 1em;
-    }
+  }
 
-.error {
+  .error {
     color: red;'
     font-size: 0.6em;
-    }
-}
+  }
 
 `

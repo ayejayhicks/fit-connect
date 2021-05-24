@@ -25,7 +25,7 @@ mongoose.connect(
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
-    useFindAndModify: false, 
+    useFindAndModify: false,
   }
 );
 
@@ -34,7 +34,7 @@ var store = new MongoDBStore(
     uri: process.env.MONGODB_URI || 'mongodb://localhost/fitconnect',
     collection: 'sessions'
   });
- 
+
 store.on('error', function(error) {
   if (error){
     console.log("Error occurred");

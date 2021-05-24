@@ -8,31 +8,27 @@ import { FooterSection } from '../Components/Home_Components/Footer';
 import { FooterContent } from '../Components/Home_Components/FooterContent';
 //
 const SignUp = () => {
-    return (
-        <React.Fragment>
-            {/* Navigation Bar */}
-            <SignUpContainer>
-                <NavigationBar>
-                </NavigationBar>
-            </SignUpContainer>
+  return (
+    <React.Fragment>
+      {/* Navigation Bar */}
+      <SignUpContainer>
+        <NavigationBar />
+      </SignUpContainer>
 
-            {/* Forms */}
-            <SignUpLayout>
-                    <SignUpImg>
-                    </SignUpImg>
-                <SignUpForms>
-                </SignUpForms>
-            </SignUpLayout>
+      {/* Forms */}
+      <SignUpLayout>
+        <SignUpImg />
+        <SignUpForms />
+      </SignUpLayout>
 
-            {/* Footer */}
-            <FooterSection>
-                <SignUpContainer>
-                    <FooterContent>
-                    </FooterContent>
-                </SignUpContainer>
-            </FooterSection>
-        </React.Fragment>
-    )
+      {/* Footer */}
+      <FooterSection>
+        <SignUpContainer>
+            <FooterContent />
+        </SignUpContainer>
+      </FooterSection>
+    </React.Fragment>
+  )
 }
 
 export default SignUp;

@@ -1,7 +1,7 @@
 import axios from "axios";
 
 
-// Export an object containing methods 
+// Export an object containing methods
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {

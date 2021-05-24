@@ -42,7 +42,7 @@ const eventSeed = [
     duration: "2h",
     eventLocation: "1212 robin lane, Sandy Spring, CA"
   },
-  
+
 ];
 
 db.Event.remove({})

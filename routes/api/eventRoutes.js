@@ -78,7 +78,7 @@ router.post("/:id/register", async ({ params: { id }, session: { user_email: ema
   };
 });
 
-// POST to register user for event
+// POST to unregister user for event
 // POST: /api/events/:id/unregister
 router.post("/:id/unregister", async ({ params: { id }, session: { user_email: email } }, res) => {
   try {
