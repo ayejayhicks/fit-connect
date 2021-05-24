@@ -10,7 +10,7 @@ router.use(function(req, res) {
         console.log("Redirecting to Login as user is not logged in");
         res.redirect("/signin");
         return;
-    } 
+    }
     res.sendFile(path.join(__dirname, "../client/build/index.html"));
   });
 

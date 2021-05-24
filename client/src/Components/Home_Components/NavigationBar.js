@@ -28,16 +28,16 @@ class NavigationBar extends Component {
     const logged_in = AuthService.isLoggedIn();
     let navLinks = "";
     let featureLink = "";
-    if (window.location.pathname === "/" ){
+    if (window.location.pathname === "/") {
       featureLink = <Nav.Link
-      onClick={(e) => {
-        e.preventDefault()
-        scroller.scrollTo('features', {
-          smooth: true
-        })
-      }}
-      className="textNavBar">
-      Features
+        onClick={(e) => {
+          e.preventDefault()
+          scroller.scrollTo('features', {
+            smooth: true
+          })
+        }}
+        className="textNavBar">
+        Features
     </Nav.Link>
     }
     if (logged_in) {
@@ -52,8 +52,8 @@ class NavigationBar extends Component {
             }}
             className="textNavBar">
             About
-      </Nav.Link>
-      {featureLink}
+          </Nav.Link>
+          {featureLink}
           <Nav.Link className="textNavBar" href="/main"> Events </Nav.Link>
           <Nav.Link className="textNavBar" onClick={this.handleLogout}> Logout </Nav.Link>
         </Nav>
@@ -69,8 +69,8 @@ class NavigationBar extends Component {
             }}
             className="textNavBar">
             About
-      </Nav.Link>
-      {featureLink}
+          </Nav.Link>
+          {featureLink}
           <Nav.Link className="textNavBar" href="/signin">Login</Nav.Link>
           <Button variant="flat" href="/signup"> Sign Up </Button>
         </Nav >

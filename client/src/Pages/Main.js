@@ -6,25 +6,23 @@ import { FooterSection } from '../Components/Home_Components/Footer';
 import { FooterContent } from '../Components/Home_Components/FooterContent';
 
 const Main = () => {
-    return (
-        <React.Fragment>
-            <Layout>
-                <LoggedNavigationBar />
-            </Layout>
-            
-            <Layout>
-                <MainCards>
-                </MainCards>
-            </Layout>
+  return (
+      <React.Fragment>
+        <Layout>
+          <LoggedNavigationBar />
+        </Layout>
 
-            <FooterSection>
-                <Layout>
-                    <FooterContent>
-                    </FooterContent>
-                </Layout>
-            </FooterSection>
-        </React.Fragment>
-    );
+        <Layout>
+          <MainCards />
+        </Layout>
+
+        <FooterSection>
+          <Layout>
+              <FooterContent />
+          </Layout>
+        </FooterSection>
+      </React.Fragment>
+  );
 }
 
 export default Main;

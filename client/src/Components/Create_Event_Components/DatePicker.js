@@ -15,10 +15,10 @@
 //                     ({ form, field }) => {
 //                         const { setFieldValue } = form
 //                         const { value } = field
-//                         return <DateView id={name} 
-//                         {...field} 
-//                         {...rest} 
-//                         selected={value} 
+//                         return <DateView id={name}
+//                         {...field}
+//                         {...rest}
+//                         selected={value}
 //                         onChange={val => setFieldValue(name, val)} />
 //                     }
 //                 }

@@ -18,7 +18,6 @@ const UserFunction = (values) => {
         .catch(err => console.log(err));
 }
 
-
 const CustomTextInput = ({ label, ...props }) => {
     const [field, meta] = useField(props);
     return (
@@ -33,7 +32,6 @@ const CustomTextInput = ({ label, ...props }) => {
     )
 }
 
-
 const CustomSelect = ({ label, ...props }) => {
     const [field, meta] = useField(props);
 
@@ -46,7 +44,6 @@ const CustomSelect = ({ label, ...props }) => {
             ) : null}
         </Form.Group>
         </>
-
     )
 }
 
@@ -66,7 +63,7 @@ export const DatePickerField = ({ ...props }) => {
   };
 
 function CreateEventForm(date) {
-    
+
     return (
         <Styles>
             <Formik
@@ -81,7 +78,6 @@ function CreateEventForm(date) {
                     participants: '',
                     eventLocation: '',
                     city:''
-
                 }}
                 validationSchema={Yup.object({
                     eventName: Yup.string()
@@ -109,8 +105,6 @@ function CreateEventForm(date) {
                         .required('Required'),
                     date: Yup.date()
                         .required('Please enter a date in the format of MM/DD/YYYY')
-
-
                 })}
                 onSubmit={(values, { setSubmitting, resetForm }) => {
                     setTimeout(() => {

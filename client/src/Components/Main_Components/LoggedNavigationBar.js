@@ -19,8 +19,6 @@ export const LoggedNavigationBar = () => (
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse >
                 <Nav className="ml-auto">
-                   
-
                     <Button variant="flat" href="/"> Logout </Button>
                 </Nav>
             </Navbar.Collapse>

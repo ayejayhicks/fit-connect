@@ -9,8 +9,8 @@ import SignUp from './Pages/SignUp';
 import CreateEventForm from './Pages/CreateEvent';
 import { UserProvider } from './utils/GlobalState';
 
-import './App.css'
-import './index.css'
+import './App.css';
+import './index.css';
 
 class App extends Component {
   render() {
