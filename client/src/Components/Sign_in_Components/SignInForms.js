@@ -6,6 +6,7 @@ import * as Yup from 'yup'
 import '../../index.css'
 import API from "../../utils/API";
 import { useUserContext } from '../../utils/GlobalState';
+import './SignInForms.css'
 
 const CustomTextInput = ({ label, ...props }) => {
     const [field, meta] = useField(props);
