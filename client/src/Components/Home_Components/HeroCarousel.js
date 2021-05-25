@@ -8,4 +8,3 @@ export const HeroCarousel = () => (
         <h1 id="heroText">Fit-Connect .. Together We Go Further!</h1>
     </Jumbotron>
 );
-

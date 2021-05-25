@@ -15,31 +15,27 @@ export const SignInFooterContent = (props) => (
                     <h6>Mission</h6>
                     <li className="bodyTextFooter">Our mission is to provide an avenue for active individuals to connect with each other to produce results!</li>
 
-                </ul>
-            </Col>
+      {/* EmptyColumn 2 */}
+      <Col xs={3} />
 
-            {/* EmptyColumn 2 */}
-            <Col xs={3}>
-            </Col>
+      {/* Column 3 */}
+      <Col xs={5} className="footerColumn2">
+        <Form>
+          <Form.Group controlId="formBasicEmail">
+            <Form.Label>Contact</Form.Label>
+            <Form.Control type="email" placeholder="Email" />
+          </Form.Group>
 
-            {/* Column 3 */}
-            <Col xs={5} className="footerColumn2">
-                <Form>
-                    <Form.Group controlId="formBasicEmail">
-                        <Form.Label>Contact</Form.Label>
-                        <Form.Control type="email" placeholder="Email" />
-                    </Form.Group>
-
-                    <Form.Group controlId="exampleForm.ControlTextarea1">
-                        <Form.Label>Message</Form.Label>
-                        <Form.Control as="textarea" rows={3} />
-                    </Form.Group>
-                    <Button variant="primary" type="submit">
-                        Submit
-                </Button>
-                </Form>
-            </Col>
-        </Row>
-    </Container>
+          <Form.Group controlId="exampleForm.ControlTextarea1">
+            <Form.Label>Message</Form.Label>
+            <Form.Control as="textarea" rows={3} />
+          </Form.Group>
+          <Button variant="primary" type="submit">
+            Submit
+          </Button>
+        </Form>
+      </Col>
+    </Row>
+  </Container>
 
 );

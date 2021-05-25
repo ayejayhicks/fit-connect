@@ -15,17 +15,13 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("client/build"));
 
-// app.get("*", function(req, res) {
-//   res.sendFile(path.join(__dirname, "./client/public/index.html"));
-// });
-
 mongoose.connect(
   process.env.MONGODB_URI || 'mongodb://localhost/fitconnect',
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
-    useFindAndModify: false, 
+    useFindAndModify: false,
   }
 );
 
@@ -34,7 +30,7 @@ var store = new MongoDBStore(
     uri: process.env.MONGODB_URI || 'mongodb://localhost/fitconnect',
     collection: 'sessions'
   });
- 
+
 store.on('error', function(error) {
   if (error){
     console.log("Error occurred");

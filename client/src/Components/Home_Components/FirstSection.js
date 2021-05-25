@@ -29,6 +29,18 @@ export const FirstSection = () => (
 
             </Row>
 
-        </Container>
-    </>
+                            </Card.Text>
+                <Button variant="flat" size="" href="/signup"> Join Us </Button>
+              </Card.Body>
+            </Card>
+          </CardDeck>
+        </Col>
+        <Col xl="6">
+          <div className="img0Div">
+            <div className="img0 mt-5" alt="people-training"></div>
+          </div>
+        </Col>
+      </Row>
+    </Container>
+  </>
 );

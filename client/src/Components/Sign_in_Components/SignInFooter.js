@@ -4,8 +4,7 @@ import './SignInFooter.css'
 
 export const SignInFooterSection = (props) => (
 
-        <Row className="SignInFooterMargin">
-        {props.children}
-        </Row>
+  <Row className="SignInFooterMargin">
+    {props.children}
+  </Row>
 );
-

@@ -6,24 +6,25 @@ import { SignInFooterSection } from '../Components/Sign_in_Components/SignInFoot
 import { SignInFooterContent } from '../Components/Sign_in_Components/SignInFooterContent';
 
 const SignIn = () => {
-    return (
-        <React.Fragment>
-                <Layout>
-            <NavigationBar>
-            </NavigationBar>
-                </Layout>
-                <Layout>
-                <SignInForms>
-                </SignInForms>
-            </Layout>
-            <SignInFooterSection>
-                <Layout>
-                    <SignInFooterContent>
-                    </SignInFooterContent>
-                </Layout>
-            </SignInFooterSection>
-            </React.Fragment>
-    )
+  return (
+    <React.Fragment>
+      {/* Navigation Bar */}
+      <Layout>
+        <NavigationBar />
+      </Layout>
+
+      <Layout>
+        <SignInForms />
+      </Layout>
+
+      {/* Footer */}
+      <SignInFooterSection>
+        <Layout>
+            <SignInFooterContent />
+        </Layout>
+      </SignInFooterSection>
+    </React.Fragment>
+  )
 }
 
 export default SignIn;

@@ -3,11 +3,10 @@ const Schema = mongoose.Schema;
 
 const opts = { toJSON: { virtuals: true } };
 const EventSchema = new Schema({
-  // TODO: Update this to have the necessary fields that make of an "Event"
   eventName: {
     type: String,
     trim: true,
-  }, 
+  },
   typeOfEvent: {
     type: String,
     trim: true,

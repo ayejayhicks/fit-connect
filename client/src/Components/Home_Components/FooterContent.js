@@ -15,31 +15,28 @@ export const FooterContent = (props) => (
                     <h6>Mission</h6>
                     <li className="bodyTextFooter">Our mission is to connect people whom enjoy living a healthy, active lifestyle who have similar goals and enjoy trying new things!</li>
 
-                </ul>
-            </Col>
+      {/* EmptyColumn 2 */}
+      <Col xs={3}>
+      </Col>
 
-            {/* EmptyColumn 2 */}
-            <Col xs={3}>
-            </Col>
-
-            {/* Column 3 */}
-            <Col xs={5} className="footerColumn2">
-                <Form action="https://formsubmit.co/el/fawoyo" method="POST">
-                    <input type="hidden" name="_captcha" value="false"></input>
-                    <Form.Group controlId="formBasicEmail">
-                        <Form.Label>Contact</Form.Label>
-                        <Form.Control type="email" placeholder="Email" required />
-                    </Form.Group>
-                    <Form.Group controlId="exampleForm.ControlTextarea1">
-                        <Form.Label>Message</Form.Label>
-                        <Form.Control as="textarea" rows={3} required />
-                    </Form.Group>
-                    <Button variant="primary" type="submit"  >
-                        Submit
-                </Button>
-                </Form>
-            </Col>
-        </Row>
-    </Container>
+      {/* Column 3 */}
+      <Col xs={5} className="footerColumn2">
+        <Form action="https://formsubmit.co/el/fawoyo" method="POST">
+          <input type="hidden" name="_captcha" value="false"></input>
+          <Form.Group controlId="formBasicEmail">
+            <Form.Label>Contact</Form.Label>
+            <Form.Control type="email" placeholder="Email" required />
+          </Form.Group>
+          <Form.Group controlId="exampleForm.ControlTextarea1">
+            <Form.Label>Message</Form.Label>
+            <Form.Control as="textarea" rows={3} required />
+          </Form.Group>
+          <Button variant="primary" type="submit"  >
+            Submit
+          </Button>
+        </Form>
+      </Col>
+    </Row>
+  </Container>
 
 );

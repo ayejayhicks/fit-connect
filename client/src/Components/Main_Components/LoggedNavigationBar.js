@@ -2,7 +2,6 @@ import React from 'react'
 import { Nav, Navbar, Button } from 'react-bootstrap'
 import "./LoggedNavigationBar.css";
 import navBarImage from "../../Assets/fitness-navbar.svg";
-import { scroller } from 'react-scroll';
 
 export const LoggedNavigationBar = () => (
     <>
@@ -20,8 +19,6 @@ export const LoggedNavigationBar = () => (
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse >
                 <Nav className="ml-auto">
-                   
-
                     <Button variant="flat" href="/"> Logout </Button>
                 </Nav>
             </Navbar.Collapse>

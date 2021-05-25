@@ -4,8 +4,7 @@ import './Footer.css'
 
 export const FooterSection = (props) => (
 
-        <Row className="footerMargin"> 
-        {props.children}
-        </Row>
+  <Row className="footerMargin">
+    {props.children}
+  </Row>
 );
-

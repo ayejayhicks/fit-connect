@@ -1,6 +1,7 @@
 #marginRow {
     font-family: roboto;
 }
+
 .img2Div{
     height: auto;
     width: auto;
@@ -8,35 +9,36 @@
     margin: 0 auto;
     background-position: center center;
 }
+
 .img2 {
-    
     background-image: url('../../Assets/img5.png');
     background-size: contain;
     background-repeat: no-repeat;
     height: 100%;
     width: 100%;
     background-position: center center;
-   
-    
 }
+
 .cardAlign2 {
 position: relative;
   top: 30%;
 }
-/* .container {
-    display: flex;
-} */
+
 
 @media (max-width: 1080px){
-    .container{
-        flex-direction: column; 
-    } 
-    .left_bottom{
-        order: 2; 
-        width: 100%; 
-    }
-    .right_top{
-        order: 1; 
-        width: 100%; 
-    }
+
+  .container{
+    flex-direction: column;
+  }
+
+  .left_bottom{
+    order: 2;
+    width: 100%;
+  }
+
+  .right_top{
+    order: 1;
+    width: 100%;
+  }
+
 }
