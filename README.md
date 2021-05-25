@@ -12,16 +12,16 @@ I want to connect with other like minded individuals
 So that I can continue to be motivated and try new and exciting activities 
 
 ### Technologies Used  
-M -  Mongo  
+M -  MongoDB    
 E -  Express  
 R -  React  
 N -  Node  
+React-Bootstrap  
+Formik  
+Yup
 
 ### Goal
-The goal of our application is to bring together individuals who are active and like minded. 
-
-### Challenges and Successes
-Our primary challenge was using the many-to-many association to join our plants data and our users data. We were successful in setting up a framework for our application, designing a cohesive application, and creating and serving our seeds data.
+The goal of our application is to keep people active. To allow them a place to create interest in activities that they and others may desire and to form accountability through events created.
 
 ### Contributers
 Alaina Hicks [https://github.com/ayejayhicks]  

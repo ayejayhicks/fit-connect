@@ -15,8 +15,8 @@ export const Cards = () => (
                 <Card.Body>
                     <Card.Title><h5>DIFFERENT LEVELS</h5></Card.Title>
                     <Card.Text className="text">
-                        Find your level, from beginner to advanced, we have a place for everybody!
-      </Card.Text>
+                        Fit-Connect welcomes all fitness levels from beginner to advanced.
+                    </Card.Text>
                 </Card.Body>
             </Card>
             <Card className="border-0 align-items-center">
@@ -24,7 +24,7 @@ export const Cards = () => (
                 <Card.Body>
                     <Card.Title><h5>FIND YOUR GROUP</h5></Card.Title>
                     <Card.Text className="text">
-                        Look for groups based on the things that you love to do!{' '}
+                        Look for groups based on the things that you enjoy doing or try something new!
                     </Card.Text>
                 </Card.Body>
             </Card>
@@ -33,8 +33,8 @@ export const Cards = () => (
                 <Card.Body>
                     <Card.Title><h5>HOW WE WORK</h5></Card.Title>
                     <Card.Text className="text">
-                        Our mission is to connect people whom enjoy living a healthy, active lifestyle who have like minded goals and enjoy trying new things!
-      </Card.Text>
+                    Fit-Connect provides opportunities for people to connect with others to produce results!
+                    </Card.Text>
                 </Card.Body>
             </Card>
         </CardDeck>
