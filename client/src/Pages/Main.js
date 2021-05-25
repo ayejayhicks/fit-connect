@@ -8,6 +8,7 @@ import { FooterContent } from '../Components/Home_Components/FooterContent';
 const Main = () => {
   return (
     <React.Fragment>
+      {/* Navigation Bar */}
       <Layout>
         <LoggedNavigationBar />
       </Layout>
@@ -16,6 +17,7 @@ const Main = () => {
         <MainCards />
       </Layout>
 
+      {/* Footer */}
       <FooterSection>
         <Layout>
             <FooterContent />
