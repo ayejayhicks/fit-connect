@@ -9,24 +9,24 @@ import { FooterSection } from '../Components/Home_Components/Footer';
 import { FooterContent } from '../Components/Home_Components/FooterContent';
 
 export const Home = () => {
-    return (
-        <React.Fragment>
+  return (
+      <React.Fragment>
+        <Layout>
+          <NavigationBar />
+        </Layout>
+        <HeroCarousel />
+        <Layout>
+          <Cards />
+        </Layout>
+        <FirstSection />
+        <SecondSection />
+        <FooterSection>
           <Layout>
-            <NavigationBar />
+            <FooterContent />
           </Layout>
-          <HeroCarousel />
-          <Layout>
-            <Cards />
-          </Layout>
-          <FirstSection />
-          <SecondSection />
-          <FooterSection>
-            <Layout>
-              <FooterContent />
-            </Layout>
-          </FooterSection>
-        </React.Fragment>
-    );
+        </FooterSection>
+      </React.Fragment>
+  );
 }
 
 export default Home;

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Form, Button, Row, Col } from 'react-bootstrap';
 import { Styles } from './EditSignUpForms'
-// import { } from 'react-bootstrap';
 import { Formik, useField, Form as Form1 } from 'formik';
 import * as Yup from 'yup'
 import '../../index.css'

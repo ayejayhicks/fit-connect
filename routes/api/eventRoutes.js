@@ -11,9 +11,6 @@ router.get("/", async ({ session: { user_email: email } }, res) => {
       return;
     }
 
-    // Check each Event and see if `user.id` is contained within `event.users` list.
-    // If it is: add the field `isRegistered: true` to the Event
-    // If it isn't: add the field `isRegistered: false` to the Event
     const events = await db.Event.aggregate([
       {
         $addFields: {
@@ -51,7 +48,6 @@ router.post("/", async (req, res) => {
   }
 });
 
-// POST to register user for event
 // POST: /api/events/:id/register
 router.post("/:id/register", async ({ params: { id }, session: { user_email: email } }, res) => {
   try {
@@ -78,7 +74,6 @@ router.post("/:id/register", async ({ params: { id }, session: { user_email: ema
   };
 });
 
-// POST to unregister user for event
 // POST: /api/events/:id/unregister
 router.post("/:id/unregister", async ({ params: { id }, session: { user_email: email } }, res) => {
   try {

@@ -8,11 +8,6 @@ export const Styles = styled.div`
     font-family: roboto;
   }
 
-  // form {
-  //   display: flex;
-  //   flex-direction: column;
-  //   margin 100px auto;
-
   label {
     font-weight: 500;
   }

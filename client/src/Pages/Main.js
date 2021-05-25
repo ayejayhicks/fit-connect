@@ -7,21 +7,21 @@ import { FooterContent } from '../Components/Home_Components/FooterContent';
 
 const Main = () => {
   return (
-      <React.Fragment>
-        <Layout>
-          <LoggedNavigationBar />
-        </Layout>
+    <React.Fragment>
+      <Layout>
+        <LoggedNavigationBar />
+      </Layout>
 
-        <Layout>
-          <MainCards />
-        </Layout>
+      <Layout>
+        <MainCards />
+      </Layout>
 
-        <FooterSection>
-          <Layout>
-              <FooterContent />
-          </Layout>
-        </FooterSection>
-      </React.Fragment>
+      <FooterSection>
+        <Layout>
+            <FooterContent />
+        </Layout>
+      </FooterSection>
+    </React.Fragment>
   );
 }
 
