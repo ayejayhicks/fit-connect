@@ -8,12 +8,16 @@ import { SignInFooterContent } from '../Components/Sign_in_Components/SignInFoot
 const SignIn = () => {
   return (
     <React.Fragment>
+      {/* Navigation Bar */}
       <Layout>
         <NavigationBar />
       </Layout>
+
       <Layout>
         <SignInForms />
       </Layout>
+
+      {/* Footer */}
       <SignInFooterSection>
         <Layout>
             <SignInFooterContent />

@@ -11,15 +11,19 @@ import { FooterContent } from '../Components/Home_Components/FooterContent';
 export const Home = () => {
   return (
       <React.Fragment>
+      {/* Navigation Bar */}
         <Layout>
           <NavigationBar />
         </Layout>
+        
         <HeroCarousel />
         <Layout>
           <Cards />
         </Layout>
         <FirstSection />
         <SecondSection />
+
+      {/* Footer */}
         <FooterSection>
           <Layout>
             <FooterContent />
