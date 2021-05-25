@@ -119,7 +119,7 @@ function Events() {
   const eventCards = () => {
     return events.map(event => {
       const eventdate = new Date(event.date);
-      return <Col lg={4}>
+      return <Col lg={4} key={event._id}>
         <Card id="mainCardId" style={{ width: '20rem' }} className="bg-dark text-white mb-5 mt-5 ml-5 mr-5">
           <Card.Img variant="top" src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0oTz2p2B3qG8hkzcfoWijkNQn38UxGZZZDw&usqp=CAU"} alt="Card Image" />
           <Card.ImgOverlay>
