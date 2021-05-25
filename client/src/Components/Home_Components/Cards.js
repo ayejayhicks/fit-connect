@@ -33,7 +33,7 @@ export const Cards = () => (
                 <Card.Body>
                     <Card.Title><h5>HOW WE WORK</h5></Card.Title>
                     <Card.Text className="text">
-                        Our mission is to connect people that are trying to achieve the same goal!
+                        Our mission is to connect people whom enjoy living a healthy, active lifestyle who have like minded goals and enjoy trying new things!
       </Card.Text>
                 </Card.Body>
             </Card>
