@@ -5,7 +5,7 @@ import "./HeroCarousel.css"
 export const HeroCarousel = () => (
 
   <Jumbotron className="background-tint Jumbotron text-center">
-    <h1 id="heroText">FIT-CONNECT .. Together We Go Further!</h1>
+    <h1 id="heroText">Connecting people to stay FIT!</h1>
   </Jumbotron>
 
 );
