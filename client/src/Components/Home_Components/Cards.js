@@ -15,7 +15,7 @@ export const Cards = () => (
                 <Card.Body>
                     <Card.Title><h5>DIFFERENT LEVELS</h5></Card.Title>
                     <Card.Text className="text">
-                        Fit-Connect welcomes all fitness levels from beginner to advanced.
+                        FIT-CONNECT welcomes all fitness levels from beginner to advanced.
                     </Card.Text>
                 </Card.Body>
             </Card>
@@ -33,7 +33,7 @@ export const Cards = () => (
                 <Card.Body>
                     <Card.Title><h5>HOW WE WORK</h5></Card.Title>
                     <Card.Text className="text">
-                    Fit-Connect provides opportunities for people to connect with others to produce results!
+                    FIT-CONNECT provides opportunities for people to connect with others to produce results!
                     </Card.Text>
                 </Card.Body>
             </Card>

@@ -18,7 +18,7 @@ export const SecondSection = () => (
               <Card.Body>
                 <Card.Title><h2>Workout from the safety of your home!</h2></Card.Title>
                 <Card.Text className="text">
-                  Covid has hit everyone differently. We understand the impact that it has caused many of you in relation to your day to day goals and activities. We also understand that you may not be ready to come outside just yet, but worry not, Fit-Connect allows you to create or join an online
+                  Covid has hit everyone differently. We understand the impact that it has caused many of you in relation to your day to day goals and activities. We also understand that you may not be ready to come outside just yet, but worry not, FIT-CONNECT allows you to create or join an online
                   event where you will be connected with others from their own homes. Let's get it done, TOGETHER!
                 </Card.Text>
                 <Button variant="flat" size="" href="/signup"> Join Us </Button>
