@@ -15,7 +15,7 @@ export const Home = () => {
         <Layout>
           <NavigationBar />
         </Layout>
-        
+
         <HeroCarousel />
         <Layout>
           <Cards />
