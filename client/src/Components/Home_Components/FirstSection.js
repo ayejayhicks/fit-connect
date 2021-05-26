@@ -13,7 +13,7 @@ export const FirstSection = () => (
               <Card.Body>
                 <Card.Title><h2>Trying to achieve new goals?</h2></Card.Title>
                 <Card.Text className="text">
-                  FIT CONNECT provide a better way for fitness enthusiasts to connect to each other. Here you can register or create your own event and find people to do the workouts with you.
+                  FIT-CONNECT provides a better way for fitness enthusiasts to connect to each other. Here you can register or create your own event and find people to join you. Together We Go Further!
 
                             </Card.Text>
                 <Button variant="flat" size="" href="/signup"> Join Us </Button>

@@ -10,7 +10,7 @@ export const FooterContent = (props) => (
       <Col xs={4} className="footerColumn1">
         <ul className="list-unstyled">
           <h6 id="about">About Us</h6>
-          <li className="bodyTextFooter">Fit-Connect was created by a group of developers who believe joining a team or having partners to push yourself harder is more efficient than doing it by yourself. </li>
+          <li className="bodyTextFooter">FIT-CONNECT was created by a group of developers who believe that joining a team and having accountability partners helps push yourself and is more effective than doing it by yourself. </li>
           <br></br>
           <h6>Mission</h6>
           <li className="bodyTextFooter">Our mission is to connect people whom enjoy living a healthy, active lifestyle who have similar goals and enjoy trying new things!</li>
