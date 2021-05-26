@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Nav, Navbar, Button } from 'react-bootstrap'
 import "./NavigationBar.css";
-import navBarImage from "../../Assets/fitness-navbar.svg";
+import navBarImage from "../../Assets/fitness-navbar.jpg";
 import { scroller } from 'react-scroll';
 import AuthService from '../../utils/AuthService';
 import API from '../../utils/API';
