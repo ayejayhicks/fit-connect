@@ -35,4 +35,12 @@ GitHub [https://github.com/ayejayhicks/fit-connect]
 Fit Connect Heroku link [https://shrouded-shore-55489.herokuapp.com/]  
 Presentation [https://xd.adobe.com/view/e1504d98-b791-43c5-9ee9-1042e0bb5a66-b403/]  
 
-### Screenshots
+### Screenshots  
+Main Page: ![Screenshot (47)](https://user-images.githubusercontent.com/73868232/119599285-4da9dd80-bdaa-11eb-909b-360391e939e2.png)  
+Sign In Page: ![Screenshot (48)](https://user-images.githubusercontent.com/73868232/119599368-7cc04f00-bdaa-11eb-88c6-63a74f25177a.png)  
+Sign Up Page: ![Screenshot (49)](https://user-images.githubusercontent.com/73868232/119599426-995c8700-bdaa-11eb-9a51-e360268cc41e.png)  
+Upcoming Events Page: ![Screenshot (50)](https://user-images.githubusercontent.com/73868232/119599466-aaa59380-bdaa-11eb-87e0-2ee01b1a9c79.png)  
+Create Event Page: ![Screenshot (51)](https://user-images.githubusercontent.com/73868232/119599508-c01abd80-bdaa-11eb-9b11-8fd247f0b179.png)  
+
+
+
