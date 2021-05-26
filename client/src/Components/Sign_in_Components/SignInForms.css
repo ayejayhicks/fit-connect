@@ -1,7 +1,17 @@
 .MarginContainerSignIn {
-    margin-top: 18vh;
+    margin-top: 16vh;
+    margin-bottom: 18vh!important;
 }
 
 .textAlignCenter {
     text-align: center;
+}
+
+
+@media (max-width: 700px){
+
+ .MarginContainerSignIn {
+    margin-top: 0vh;
+
+    }
 }
