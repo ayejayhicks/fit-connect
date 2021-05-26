@@ -29,9 +29,10 @@ Courtney Fox [https://github.com/CFox2019]
 Deepali Garg [https://github.com/Deepali-Gtech]  
 Wildnei Suane [https://github.com/wildnei]  
 
-### Links
+### Links  
+Fit Connect Mock Up [https://xd.adobe.com/view/d1fa2444-1b06-4994-8ebf-f350ad6ed24f-84a9/]
 GitHub [https://github.com/ayejayhicks/fit-connect]  
 Fit Connect Heroku link [https://shrouded-shore-55489.herokuapp.com/]  
-Presentation [ ]  
+Presentation [https://xd.adobe.com/view/e1504d98-b791-43c5-9ee9-1042e0bb5a66-b403/]  
 
 ### Screenshots
